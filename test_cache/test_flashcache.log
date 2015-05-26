@@ -1,0 +1,1290 @@
+Linux ubuntu 3.16.0-31-generic #41-Ubuntu SMP Tue Feb 10 15:24:04 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+/dev/sdc:
+
+ Model=WDC WD4000FYYZ-01UL1B2, FwRev=01.01K03, SerialNo=WD-WCC133L4Y9LH
+ Config={ HardSect NotMFM HdSw>15uSec SpinMotCtl Fixed DTR>5Mbs FmtGapReq }
+ RawCHS=16383/16/63, TrkSize=0, SectSize=0, ECCbytes=0
+ BuffType=unknown, BuffSize=unknown, MaxMultSect=16, MultSect=16
+ CurCHS=16383/16/63, CurSects=16514064, LBA=yes, LBAsects=7814037168
+ IORDY=on/off, tPIO={min:120,w/IORDY:120}, tDMA={min:120,rec:120}
+ PIO modes:  pio0 pio3 pio4 
+ DMA modes:  mdma0 mdma1 mdma2 
+ UDMA modes: udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+ AdvancedPM=yes: unknown setting WriteCache=enabled
+ Drive conforms to: Unspecified:  ATA/ATAPI-1,2,3,4,5,6,7
+
+ * signifies the current active mode
+
+
+/dev/sdb:
+
+ Model=Samsung SSD 850 PRO 256GB, FwRev=EXM01B6Q, SerialNo=S1SUNWAFA01434D
+ Config={ Fixed }
+ RawCHS=16383/16/63, TrkSize=0, SectSize=0, ECCbytes=0
+ BuffType=unknown, BuffSize=unknown, MaxMultSect=1, MultSect=1
+ CurCHS=16383/16/63, CurSects=16514064, LBA=yes, LBAsects=500118192
+ IORDY=on/off, tPIO={min:120,w/IORDY:120}, tDMA={min:120,rec:120}
+ PIO modes:  pio0 pio1 pio2 pio3 pio4 
+ DMA modes:  mdma0 mdma1 mdma2 
+ UDMA modes: udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+ AdvancedPM=no WriteCache=enabled
+ Drive conforms to: unknown:  ATA/ATAPI-2,3,4,5,6,7
+
+ * signifies the current active mode
+
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=1846: Tue Mar  3 10:41:02 2015
+  read : io=1024.0MB, bw=88622KB/s, iops=22155, runt= 11832msec
+  cpu          : usr=7.89%, sys=22.09%, ctx=262158, majf=0, minf=8
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=88622KB/s, minb=88622KB/s, maxb=88622KB/s, mint=11832msec, maxt=11832msec
+
+Disk stats (read/write):
+  sdb: ios=258188/0, merge=0/0, ticks=7764/0, in_queue=7704, util=65.57%
+             total       used       free     shared    buffers     cached
+Mem:         15761        308      15453          0         14         99
+-/+ buffers/cache:        194      15567
+Swap:        16106          0      16106
+flashcache_create
+dev.flashcache.sdb+sdc.cache_all = 1
+dev.flashcache.sdb+sdc.clean_on_read_miss = 0
+dev.flashcache.sdb+sdc.clean_on_write_miss = 0
+dev.flashcache.sdb+sdc.dirty_thresh_pct = 20
+dev.flashcache.sdb+sdc.do_pid_expiry = 0
+dev.flashcache.sdb+sdc.do_sync = 0
+dev.flashcache.sdb+sdc.fallow_clean_speed = 2
+dev.flashcache.sdb+sdc.fallow_delay = 900
+dev.flashcache.sdb+sdc.fast_remove = 0
+dev.flashcache.sdb+sdc.io_latency_hist = 0
+dev.flashcache.sdb+sdc.lru_hot_pct = 75
+dev.flashcache.sdb+sdc.lru_promote_thresh = 2
+dev.flashcache.sdb+sdc.max_clean_ios_set = 2
+dev.flashcache.sdb+sdc.max_clean_ios_total = 4
+dev.flashcache.sdb+sdc.max_pids = 100
+dev.flashcache.sdb+sdc.new_style_write_merge = 0
+dev.flashcache.sdb+sdc.pid_expiry_secs = 60
+dev.flashcache.sdb+sdc.reclaim_policy = 0
+dev.flashcache.sdb+sdc.skip_seq_thresh_kb = 0
+dev.flashcache.sdb+sdc.stop_sync = 0
+dev.flashcache.sdb+sdc.zero_stats = 0
+             total       used       free     shared    buffers     cached
+Mem:         15761       1758      14002          0         15        102
+-/+ buffers/cache:       1641      14120
+Swap:        16106          0      16106
+Tue Mar  3 10:41:16 EST 2015
+ssd:sdb
+  262444      286  2101840     7892     3907        9  1946872     1932        0     9760     9760
+hdd:sdc
+     299      278     4616      104        0        0        0        0        0      104      104
+0 7814037168 flashcache stats: 
+	reads(232), writes(0)
+	read hits(118), read hit percent(50)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(0)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(0), metadata cleans(0)
+	metadata batch(0) metadata ssd writes(0)
+	cleanings(0) fallow cleanings(0)
+	no room(0) front merge(0) back merge(0)
+	force_clean_block(0)
+	disk reads(114), disk writes(0) ssd reads(118) ssd writes(114)
+	uncached reads(0), uncached writes(0), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(114), cache percent(0)
+	dirty blocks(0), dirty percent(0)
+	nr_queued(0)
+Size Hist: 4096:232 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=1883: Tue Mar  3 10:42:19 2015
+  read : io=8192.0MB, bw=132811KB/s, iops=1037, runt= 63162msec
+  cpu          : usr=0.36%, sys=8.03%, ctx=65543, majf=0, minf=39
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=132810KB/s, minb=132810KB/s, maxb=132810KB/s, mint=63162msec, maxt=63162msec
+
+Disk stats (read/write):
+    dm-0: ios=2090272/0, merge=0/0, ticks=1555596/0, in_queue=1555592, util=98.14%, aggrios=32768/1048576, aggrmerge=1015808/0, aggrticks=18098/149984, aggrin_queue=167796, aggrutil=57.20%
+  sdb: ios=0/2097152, merge=0/0, ticks=0/299968, in_queue=299424, util=37.91%
+  sdc: ios=65536/0, merge=2031616/0, ticks=36196/0, in_queue=36168, util=57.20%
+ssd:sdb
+  262444      286  2101840     7892  2101059        9 18724088   301900        0    33732   309184
+hdd:sdc
+   65835  2031894 16781832    36300        0        0        0        0        0    36272    36272
+0 7814037168 flashcache stats: 
+	reads(2097384), writes(0)
+	read hits(118), read hit percent(0)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(0)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(0), metadata cleans(0)
+	metadata batch(0) metadata ssd writes(0)
+	cleanings(0) fallow cleanings(0)
+	no room(0) front merge(0) back merge(0)
+	force_clean_block(0)
+	disk reads(2097266), disk writes(0) ssd reads(118) ssd writes(2097266)
+	uncached reads(0), uncached writes(0), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(2097266), cache percent(3)
+	dirty blocks(0), dirty percent(0)
+	nr_queued(0)
+Size Hist: 4096:2097384 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=1892: Tue Mar  3 10:42:51 2015
+  read : io=8192.0MB, bw=269245KB/s, iops=2103, runt= 31156msec
+  cpu          : usr=0.98%, sys=16.63%, ctx=65580, majf=0, minf=39
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=269245KB/s, minb=269245KB/s, maxb=269245KB/s, mint=31156msec, maxt=31156msec
+
+Disk stats (read/write):
+    dm-0: ios=2081952/0, merge=0/0, ticks=813456/0, in_queue=813448, util=88.74%, aggrios=32768/0, aggrmerge=1015808/0, aggrticks=13730/0, aggrin_queue=13716, aggrutil=87.78%
+  sdb: ios=65536/0, merge=2031616/0, ticks=27460/0, in_queue=27432, util=87.78%
+  sdc: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+ssd:sdb
+  327980  2031902 18879056    35352  2101059        9 18724088   301900        0    61164   336616
+hdd:sdc
+   65835  2031894 16781832    36300        0        0        0        0        0    36272    36272
+0 7814037168 flashcache stats: 
+	reads(4194536), writes(0)
+	read hits(2097270), read hit percent(50)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(0)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(0), metadata cleans(0)
+	metadata batch(0) metadata ssd writes(0)
+	cleanings(0) fallow cleanings(0)
+	no room(0) front merge(0) back merge(0)
+	force_clean_block(0)
+	disk reads(2097266), disk writes(0) ssd reads(2097270) ssd writes(2097266)
+	uncached reads(0), uncached writes(0), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(2097266), cache percent(3)
+	dirty blocks(0), dirty percent(0)
+	nr_queued(0)
+Size Hist: 4096:4194536 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=1899: Tue Mar  3 10:43:22 2015
+  read : io=8192.0MB, bw=269956KB/s, iops=2109, runt= 31074msec
+  cpu          : usr=0.99%, sys=16.49%, ctx=65556, majf=0, minf=39
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=269955KB/s, minb=269955KB/s, maxb=269955KB/s, mint=31074msec, maxt=31074msec
+
+Disk stats (read/write):
+    dm-0: ios=2087520/0, merge=0/0, ticks=822784/0, in_queue=822776, util=88.88%, aggrios=32768/0, aggrmerge=1015808/0, aggrticks=13756/0, aggrin_queue=13734, aggrutil=88.12%
+  sdb: ios=65536/0, merge=2031616/0, ticks=27512/0, in_queue=27468, util=88.12%
+  sdc: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+ssd:sdb
+  393516  4063518 35656272    62864  2101059        9 18724088   301900        0    88632   364084
+hdd:sdc
+   65835  2031894 16781832    36300        0        0        0        0        0    36272    36272
+0 7814037168 flashcache stats: 
+	reads(6291688), writes(0)
+	read hits(4194422), read hit percent(66)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(0)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(0), metadata cleans(0)
+	metadata batch(0) metadata ssd writes(0)
+	cleanings(0) fallow cleanings(0)
+	no room(0) front merge(0) back merge(0)
+	force_clean_block(0)
+	disk reads(2097266), disk writes(0) ssd reads(4194422) ssd writes(2097266)
+	uncached reads(0), uncached writes(0), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(2097266), cache percent(3)
+	dirty blocks(0), dirty percent(0)
+	nr_queued(0)
+Size Hist: 4096:6291688 
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=1906: Tue Mar  3 10:43:53 2015
+  read : io=1024.0MB, bw=34153KB/s, iops=8538, runt= 30702msec
+  cpu          : usr=2.69%, sys=16.13%, ctx=262194, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=34153KB/s, minb=34153KB/s, maxb=34153KB/s, mint=30702msec, maxt=30702msec
+
+Disk stats (read/write):
+    dm-0: ios=261982/0, merge=0/0, ticks=26324/0, in_queue=26320, util=85.60%, aggrios=131072/0, aggrmerge=0/0, aggrticks=12706/0, aggrin_queue=12466, aggrutil=80.97%
+  sdb: ios=262144/0, merge=0/0, ticks=25412/0, in_queue=24932, util=80.97%
+  sdc: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+ssd:sdb
+  655660  4063518 37753424    88276  2101059        9 18724088   301900        0   113564   389016
+hdd:sdc
+   65835  2031894 16781832    36300        0        0        0        0        0    36272    36272
+0 7814037168 flashcache stats: 
+	reads(6553832), writes(0)
+	read hits(4456566), read hit percent(67)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(0)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(0), metadata cleans(0)
+	metadata batch(0) metadata ssd writes(0)
+	cleanings(0) fallow cleanings(0)
+	no room(0) front merge(0) back merge(0)
+	force_clean_block(0)
+	disk reads(2097266), disk writes(0) ssd reads(4456566) ssd writes(2097266)
+	uncached reads(0), uncached writes(0), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(2097266), cache percent(3)
+	dirty blocks(0), dirty percent(0)
+	nr_queued(0)
+Size Hist: 4096:6553832 
+32rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio-2.1.11
+Starting 1 process
+
+32rr4k: (groupid=0, jobs=1): err= 0: pid=1913: Tue Mar  3 10:44:04 2015
+  read : io=4096.0MB, bw=399953KB/s, iops=99988, runt= 10487msec
+  cpu          : usr=12.00%, sys=73.20%, ctx=406842, majf=0, minf=39
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=1048576/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: io=4096.0MB, aggrb=399952KB/s, minb=399952KB/s, maxb=399952KB/s, mint=10487msec, maxt=10487msec
+
+Disk stats (read/write):
+    dm-0: ios=1040591/0, merge=0/0, ticks=326596/0, in_queue=326736, util=99.14%, aggrios=524288/0, aggrmerge=0/0, aggrticks=163802/0, aggrin_queue=163736, aggrutil=98.88%
+  sdb: ios=1048576/0, merge=0/0, ticks=327604/0, in_queue=327472, util=98.88%
+  sdc: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+ssd:sdb
+ 1704236  4063518 46142032   415880  2101059        9 18724088   301900        0   124052   716488
+hdd:sdc
+   65835  2031894 16781832    36300        0        0        0        0        0    36272    36272
+0 7814037168 flashcache stats: 
+	reads(7602408), writes(0)
+	read hits(5505142), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(0)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(0), metadata cleans(0)
+	metadata batch(0) metadata ssd writes(0)
+	cleanings(0) fallow cleanings(0)
+	no room(0) front merge(0) back merge(0)
+	force_clean_block(0)
+	disk reads(2097266), disk writes(0) ssd reads(5505142) ssd writes(2097266)
+	uncached reads(0), uncached writes(0), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(2097266), cache percent(3)
+	dirty blocks(0), dirty percent(0)
+	nr_queued(0)
+Size Hist: 4096:7602408 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=1920: Tue Mar  3 10:44:20 2015
+  write: io=4096.0MB, bw=266711KB/s, iops=2083, runt= 15726msec
+  cpu          : usr=2.65%, sys=21.34%, ctx=33403, majf=0, minf=8
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=32768/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=4096.0MB, aggrb=266711KB/s, minb=266711KB/s, maxb=266711KB/s, mint=15726msec, maxt=15726msec
+
+Disk stats (read/write):
+    dm-0: ios=232/1044544, merge=0/0, ticks=8/414912, in_queue=414916, util=91.69%, aggrios=447/33028, aggrmerge=2281/510200, aggrticks=196/6206, aggrin_queue=6382, aggrutil=77.65%
+  sdb: ios=894/65695, merge=4562/1015808, ticks=392/12312, in_queue=12664, util=77.65%
+  sdc: ios=0/361, merge=0/4592, ticks=0/100, in_queue=100, util=0.45%
+ssd:sdb
+ 1705130  4068080 46185680   416272  2166754  1015817 27376112   314212        0   136364   729152
+hdd:sdc
+   65835  2031894 16781832    36300      361     4592    39936      100        0    36344    36372
+0 7814037168 flashcache stats: 
+	reads(7602872), writes(1048576)
+	read hits(5505606), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(0)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(1048576), metadata cleans(4992)
+	metadata batch(1020641) metadata ssd writes(32927)
+	cleanings(4992) fallow cleanings(0)
+	no room(0) front merge(0) back merge(4870)
+	force_clean_block(0)
+	disk reads(2097266), disk writes(4992) ssd reads(5510598) ssd writes(3178769)
+	uncached reads(0), uncached writes(0), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(3145842), cache percent(5)
+	dirty blocks(1043584), dirty percent(1)
+	nr_queued(0)
+Size Hist: 4096:8651448 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=1938: Tue Mar  3 10:50:44 2015
+  write: io=65536MB, bw=174976KB/s, iops=1366, runt=383532msec
+  cpu          : usr=1.70%, sys=15.13%, ctx=955470, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=174975KB/s, minb=174975KB/s, maxb=174975KB/s, mint=383532msec, maxt=383532msec
+
+Disk stats (read/write):
+    dm-0: ios=229/16773952, merge=0/0, ticks=16/10607656, in_queue=10607832, util=94.76%, aggrios=240194/726094, aggrmerge=1555837/9779067, aggrticks=153766/544522, aggrin_queue=698234, aggrutil=83.39%
+  sdb: ios=480388/1195566, merge=3111675/16252635, ticks=307532/350892, in_queue=657612, util=83.39%
+  sdc: ios=0/256622, merge=0/3305499, ticks=0/738152, in_queue=738856, util=40.94%
+ssd:sdb
+ 2185523  7179881 74923232   723804  3362322 17268452 166961736   665104        0   455972  1386764
+hdd:sdc
+   65835  2031894 16781832    36300   256985  3310217 28776192   738252        0   193256   775228
+0 7814037168 flashcache stats: 
+	reads(7603336), writes(17825792)
+	read hits(5506070), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(14802)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(17825490), metadata cleans(3596722)
+	metadata batch(20717996) metadata ssd writes(704216)
+	cleanings(3596722) fallow cleanings(0)
+	no room(302) front merge(1199) back merge(3497667)
+	force_clean_block(0)
+	disk reads(2097266), disk writes(3597020) ssd reads(9102789) ssd writes(20626628)
+	uncached reads(0), uncached writes(302), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(19907954), cache percent(31)
+	dirty blocks(14228768), dirty percent(22)
+	nr_queued(0)
+Size Hist: 4096:25429128 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=1957: Tue Mar  3 11:01:06 2015
+  write: io=65536MB, bw=108076KB/s, iops=844, runt=620941msec
+  cpu          : usr=1.13%, sys=10.29%, ctx=1117574, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=108076KB/s, minb=108076KB/s, maxb=108076KB/s, mint=620941msec, maxt=620941msec
+
+Disk stats (read/write):
+    dm-0: ios=229/16773568, merge=0/0, ticks=244/18049104, in_queue=18049392, util=96.34%, aggrios=329528/794220, aggrmerge=2761952/11029506, aggrticks=305094/901128, aggrin_queue=1206386, aggrutil=87.77%
+  sdb: ios=659057/1255188, merge=5523904/16192037, ticks=610188/702004, in_queue=1311180, util=87.77%
+  sdc: ios=0/333252, merge=0/5866975, ticks=0/1100252, in_queue=1101592, util=42.88%
+ssd:sdb
+ 2844583 12703785 124387144  1333992  4617510 33460489 306539880  1367108        0  1000532  2697944
+hdd:sdc
+   65835  2031894 16781832    36300   590237  9177192 78738296  1838504        0   459268  1876820
+0 7814037168 flashcache stats: 
+	reads(7603800), writes(34603008)
+	read hits(5506534), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(0), write replacement(619269)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(34539968), metadata cleans(9779247)
+	metadata batch(42882209) metadata ssd writes(1437006)
+	cleanings(9779247) fallow cleanings(0)
+	no room(63040) front merge(54656) back merge(9458695)
+	force_clean_block(0)
+	disk reads(2097266), disk writes(9842263) ssd reads(15285759) ssd writes(38073421)
+	uncached reads(0), uncached writes(63040), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(36017965), cache percent(57)
+	dirty blocks(24760721), dirty percent(39)
+	nr_queued(0)
+Size Hist: 4096:42206808 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=1976: Tue Mar  3 11:11:25 2015
+  write: io=65536MB, bw=108492KB/s, iops=847, runt=618559msec
+  cpu          : usr=1.17%, sys=10.86%, ctx=983932, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=108492KB/s, minb=108492KB/s, maxb=108492KB/s, mint=618559msec, maxt=618559msec
+
+Disk stats (read/write):
+    dm-0: ios=228/16770752, merge=0/0, ticks=236/17911180, in_queue=17911280, util=96.23%, aggrios=253049/729969, aggrmerge=2896586/11137344, aggrticks=201952/950712, aggrin_queue=1152600, aggrutil=69.97%
+  sdb: ios=506056/1192870, merge=5793172/15469282, ticks=403884/512768, in_queue=915680, util=69.97%
+  sdc: ios=43/267069, merge=0/6805406, ticks=20/1388656, in_queue=1389520, util=63.58%
+ssd:sdb
+ 3350685 18497331 174785416  1737880  5810391 48929771 439838432  1879876        0  1432956  3613624
+hdd:sdc
+   65881  2031894 16782200    36320   857312 15982913 135598952  3227184        0   852200  3266360
+0 7814037168 flashcache stats: 
+	reads(7604264), writes(51380224)
+	read hits(5506952), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(34), write replacement(3719896)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(50508968), metadata cleans(16078613)
+	metadata batch(64457290) metadata ssd writes(2130291)
+	cleanings(16078613) fallow cleanings(19)
+	no room(871268) front merge(400073) back merge(15251212)
+	force_clean_block(0)
+	disk reads(2097312), disk writes(16949826) ssd reads(21585528) ssd writes(54735357)
+	uncached reads(12), uncached writes(871256), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(48886338), cache percent(78)
+	dirty blocks(34430355), dirty percent(55)
+	nr_queued(0)
+Size Hist: 4096:58984488 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=1995: Tue Mar  3 11:24:58 2015
+  write: io=65536MB, bw=82571KB/s, iops=645, runt=812742msec
+  cpu          : usr=0.92%, sys=10.25%, ctx=1082972, majf=0, minf=8
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=82570KB/s, minb=82570KB/s, maxb=82570KB/s, mint=812742msec, maxt=812742msec
+
+Disk stats (read/write):
+    dm-0: ios=229/16774144, merge=0/0, ticks=12/23715468, in_queue=23715524, util=96.84%, aggrios=282368/728353, aggrmerge=3459716/11710892, aggrticks=231274/1344626, aggrin_queue=1575986, aggrutil=78.09%
+  sdb: ios=564723/1100891, merge=6919432/13470417, ticks=462540/324936, in_queue=786508, util=42.49%
+  sdc: ios=13/355815, merge=0/9951367, ticks=8/2364316, in_queue=2365464, util=78.09%
+ssd:sdb
+ 3915422 25416765 234659520  2200420  6911282 62400188 556412424  2204812        0  1777964  4400132
+hdd:sdc
+   65894  2031894 16782304    36328  1213127 25934280 218424648  5591500        0  1486308  5631824
+0 7814037168 flashcache stats: 
+	reads(7604728), writes(68157440)
+	read hits(5507403), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(43), write replacement(9882882)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(64416784), metadata cleans(23562425)
+	metadata batch(85184994) metadata ssd writes(2794215)
+	cleanings(23562425) fallow cleanings(65681)
+	no room(3740672) front merge(1325650) back merge(21643094)
+	force_clean_block(0)
+	disk reads(2097325), disk writes(27303012) ssd reads(29069781) ssd writes(69306912)
+	uncached reads(16), uncached writes(3740656), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(56631168), cache percent(90)
+	dirty blocks(40854359), dirty percent(65)
+	nr_queued(0)
+Size Hist: 4096:75762168 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2017: Tue Mar  3 11:43:30 2015
+  write: io=65536MB, bw=60388KB/s, iops=471, runt=1111287msec
+  cpu          : usr=0.74%, sys=8.23%, ctx=1187258, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=60388KB/s, minb=60388KB/s, maxb=60388KB/s, mint=1111287msec, maxt=1111287msec
+
+Disk stats (read/write):
+    dm-0: ios=229/16773664, merge=0/0, ticks=12/32854884, in_queue=32854856, util=97.35%, aggrios=335571/781344, aggrmerge=4045982/12297032, aggrticks=459678/2523200, aggrin_queue=2982846, aggrutil=81.25%
+  sdb: ios=671138/1032186, merge=8091964/11191772, ticks=919316/326588, in_queue=1244988, util=37.16%
+  sdc: ios=4/530502, merge=0/13402293, ticks=40/4719812, in_queue=4720704, util=81.25%
+ssd:sdb
+ 4586563 33508841 304765296  3119736  7943470 73591960 654210656  2531400        1  2190496  5645120
+hdd:sdc
+   65899  2031894 16782344    36392  1743630 39336699 330250168 10311312        2  2388444 10352548
+0 7814037168 flashcache stats: 
+	reads(7604970), writes(84934656)
+	read hits(5507639), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(48), write replacement(17784286)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(75978796), metadata cleans(32325411)
+	metadata batch(104847229) metadata ssd writes(3456978)
+	cleanings(32325411) fallow cleanings(183414)
+	no room(8955877) front merge(3230969) back merge(28319670)
+	force_clean_block(0)
+	disk reads(2097331), disk writes(41281233) ssd reads(37833061) ssd writes(81531572)
+	uncached reads(17), uncached writes(8955860), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(60291776), cache percent(96)
+	dirty blocks(43653385), dirty percent(70)
+	nr_queued(0)
+Size Hist: 4096:92539626 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2039: Tue Mar  3 12:04:33 2015
+  write: io=65536MB, bw=53127KB/s, iops=415, runt=1263167msec
+  cpu          : usr=0.67%, sys=7.46%, ctx=1261418, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=53127KB/s, minb=53127KB/s, maxb=53127KB/s, mint=1263167msec, maxt=1263167msec
+
+Disk stats (read/write):
+    dm-0: ios=228/16775360, merge=0/0, ticks=240/37457432, in_queue=37458360, util=97.60%, aggrios=365557/805892, aggrmerge=4408522/12665373, aggrticks=525652/3107490, aggrin_queue=3633100, aggrutil=83.85%
+  sdb: ios=731109/981601, merge=8817013/9695952, ticks=1051292/317752, in_queue=1368248, util=35.17%
+  sdc: ios=6/630184, merge=31/15634794, ticks=12/5897228, in_queue=5897952, util=83.85%
+ssd:sdb
+ 5317819 42326903 381160872  4171068  8925169 83287917 739641400  2849244        0  2634348  7013496
+hdd:sdc
+   65959  2031961 16783360    36480  2373834 54972399 460671224 16208620        0  3446644 16250632
+0 7814037168 flashcache stats: 
+	reads(7605656), writes(101711872)
+	read hits(5508199), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(134), write replacement(26437069)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(86002267), metadata cleans(41874298)
+	metadata batch(123764302) metadata ssd writes(4112263)
+	cleanings(41874298) fallow cleanings(335396)
+	no room(15709662) front merge(6342314) back merge(34567599)
+	force_clean_block(0)
+	disk reads(2097457), disk writes(57583749) ssd reads(47382429) ssd writes(92210292)
+	uncached reads(57), uncached writes(15709605), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(61662464), cache percent(99)
+	dirty blocks(44127969), dirty percent(70)
+	nr_queued(0)
+Size Hist: 4096:109317528 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2061: Tue Mar  3 12:26:54 2015
+  write: io=65536MB, bw=50063KB/s, iops=391, runt=1340498msec
+  cpu          : usr=0.61%, sys=7.18%, ctx=1370383, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=50062KB/s, minb=50062KB/s, maxb=50062KB/s, mint=1340498msec, maxt=1340498msec
+
+Disk stats (read/write):
+    dm-0: ios=231/16775232, merge=0/0, ticks=4/39696440, in_queue=39696396, util=97.66%, aggrios=394061/823830, aggrmerge=4576163/12849031, aggrticks=596344/3358396, aggrin_queue=3954602, aggrutil=83.77%
+  sdb: ios=788120/973035, merge=9152327/9153289, ticks=1192656/329532, in_queue=1521424, util=34.80%
+  sdc: ios=2/674626, merge=0/16544774, ticks=32/6387260, in_queue=6387780, util=83.77%
+ssd:sdb
+ 6106064 51480544 460696944  5363760  9898276 92441206 820663608  3178784        0  3100460  8534952
+hdd:sdc
+   66002  2031961 16783704    36568  3048492 71518452 598677504 22596032        1  4568476 22638620
+0 7814037168 flashcache stats: 
+	reads(7606120), writes(118489088)
+	read hits(5508620), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(172), write replacement(35463552)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(95470222), metadata cleans(51815822)
+	metadata batch(142513998) metadata ssd writes(4772046)
+	cleanings(51815822) fallow cleanings(496700)
+	no room(23018928) front merge(10638629) back merge(40018108)
+	force_clean_block(0)
+	disk reads(2097500), disk writes(74834571) ssd reads(57324431) ssd writes(102337967)
+	uncached reads(62), uncached writes(23018866), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62103936), cache percent(99)
+	dirty blocks(43654336), dirty percent(70)
+	nr_queued(0)
+Size Hist: 4096:126095208 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2089: Tue Mar  3 12:49:18 2015
+  write: io=65536MB, bw=49962KB/s, iops=390, runt=1343198msec
+  cpu          : usr=0.65%, sys=7.15%, ctx=1419137, majf=0, minf=8
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=49962KB/s, minb=49962KB/s, maxb=49962KB/s, mint=1343198msec, maxt=1343198msec
+
+Disk stats (read/write):
+    dm-0: ios=228/16776736, merge=0/0, ticks=240/39737404, in_queue=39738000, util=97.69%, aggrios=397119/809379, aggrmerge=4517005/12804671, aggrticks=621484/3170496, aggrin_queue=3791576, aggrutil=83.86%
+  sdb: ios=794237/961778, merge=9034011/9091751, ticks=1242968/337240, in_queue=1579356, util=35.21%
+  sdc: ios=2/656981, merge=0/16517592, ticks=0/6003752, in_queue=6003796, util=83.86%
+ssd:sdb
+ 6900306 60514618 539325096  6606728 10860056 101532957 901102136  3516024        0  3572924 10114308
+hdd:sdc
+   66004  2031961 16783720    36568  3705475 88036107 736267672 28599784        0  5693752 28642416
+0 7814037168 flashcache stats: 
+	reads(7606584), writes(135266304)
+	read hits(5509082), read hit percent(72)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(174), write replacement(44749030)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(104876788), metadata cleans(61643943)
+	metadata batch(161100437) metadata ssd writes(5420294)
+	cleanings(61643943) fallow cleanings(658645)
+	no room(30389578) front merge(15922714) back merge(44368768)
+	force_clean_block(0)
+	disk reads(2097502), disk writes(92033238) ssd reads(67152942) ssd writes(112392675)
+	uncached reads(62), uncached writes(30389516), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62225024), cache percent(99)
+	dirty blocks(43232845), dirty percent(69)
+	nr_queued(0)
+Size Hist: 4096:142872888 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=2110: Tue Mar  3 12:54:14 2015
+  read : io=8192.0MB, bw=28316KB/s, iops=221, runt=296245msec
+  cpu          : usr=0.18%, sys=4.30%, ctx=237799, majf=0, minf=39
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=28316KB/s, minb=28316KB/s, maxb=28316KB/s, mint=296245msec, maxt=296245msec
+
+Disk stats (read/write):
+    dm-0: ios=2096768/0, merge=0/0, ticks=8943296/0, in_queue=8943268, util=98.85%, aggrios=111877/640510, aggrmerge=2058874/1091032, aggrticks=233614/1111736, aggrin_queue=1345134, aggrutil=78.99%
+  sdb: ios=160426/1188316, merge=2154581/32981, ticks=246532/1527496, in_queue=1773664, util=31.81%
+  sdc: ios=63328/92704, merge=1963168/2149083, ticks=220696/695976, in_queue=916604, util=78.99%
+ssd:sdb
+ 7060734 62669325 557846496  6853260 12048375 101565938 910872536  5043520        0  3667092 11887972
+hdd:sdc
+  129332  3995129 32995688   257264  3798182 90185316 754223824 29295772        0  5927628 29559032
+0 7814037168 flashcache stats: 
+	reads(9703736), writes(135266304)
+	read hits(5579738), read hit percent(57)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(1146095), write replacement(44749030)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(104876788), metadata cleans(63888462)
+	metadata batch(163269577) metadata ssd writes(5495673)
+	cleanings(63888462) fallow cleanings(696631)
+	no room(31270153) front merge(17421473) back merge(45071532)
+	force_clean_block(0)
+	disk reads(4123998), disk writes(94277757) ssd reads(69468117) ssd writes(113613975)
+	uncached reads(880637), uncached writes(30389516), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62225024), cache percent(99)
+	dirty blocks(40988326), dirty percent(65)
+	nr_queued(0)
+Size Hist: 4096:144970040 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=2117: Tue Mar  3 12:57:50 2015
+  read : io=8192.0MB, bw=38952KB/s, iops=304, runt=215358msec
+  cpu          : usr=0.29%, sys=4.79%, ctx=126359, majf=0, minf=39
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=38951KB/s, minb=38951KB/s, maxb=38951KB/s, mint=215358msec, maxt=215358msec
+
+Disk stats (read/write):
+    dm-0: ios=2094560/0, merge=0/0, ticks=6462284/0, in_queue=6462416, util=97.88%, aggrios=70828/183501, aggrmerge=1689566/691893, aggrticks=129162/282936, aggrin_queue=412030, aggrutil=84.23%
+  sdb: ios=111924/328952, merge=2483352/921, ticks=95072/238932, in_queue=333832, util=28.14%
+  sdc: ios=29733/38050, merge=895780/1382865, ticks=163252/326940, in_queue=490228, util=84.23%
+ssd:sdb
+ 7172658 65152677 578610952  6948332 12377327 101566859 913511520  5282452        0  3727672 12221804
+hdd:sdc
+  159065  4890909 40399792   420516  3836232 91568181 765615168 29622712        0  6108932 30049260
+0 7814037168 flashcache stats: 
+	reads(11800888), writes(135266304)
+	read hits(6751377), read hit percent(57)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(1440811), write replacement(44749030)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(104876788), metadata cleans(65312380)
+	metadata batch(164658338) metadata ssd writes(5530830)
+	cleanings(65312380) fallow cleanings(721653)
+	no room(31900950) front merge(18270741) back merge(45620122)
+	force_clean_block(0)
+	disk reads(5049511), disk writes(95701673) ssd reads(72063673) ssd writes(113943848)
+	uncached reads(1511434), uncached writes(30389516), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62225024), cache percent(99)
+	dirty blocks(39564408), dirty percent(63)
+	nr_queued(0)
+Size Hist: 4096:147067192 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=2127: Tue Mar  3 13:01:36 2015
+  read : io=8192.0MB, bw=37299KB/s, iops=291, runt=224904msec
+  cpu          : usr=0.26%, sys=4.16%, ctx=115921, majf=0, minf=40
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=37298KB/s, minb=37298KB/s, maxb=37298KB/s, mint=224904msec, maxt=224904msec
+
+Disk stats (read/write):
+    dm-0: ios=2096928/0, merge=0/0, ticks=6774472/0, in_queue=6774860, util=97.99%, aggrios=67875/149445, aggrmerge=1639016/640872, aggrticks=128302/215428, aggrin_queue=343708, aggrutil=86.27%
+  sdb: ios=114655/265054, merge=2641913/1353, ticks=82244/136236, in_queue=218376, util=25.75%
+  sdc: ios=21096/33836, merge=636119/1280392, ticks=174360/294620, in_queue=469040, util=86.27%
+ssd:sdb
+ 7287314 67794653 600667560  7030580 12642382 101568212 915642784  5418688        0  3785548 12440184
+hdd:sdc
+  180161  5527028 45657512   594876  3870069 92848636 776152280 29917332        0  6302864 30518300
+0 7814037168 flashcache stats: 
+	reads(13898040), writes(135266304)
+	read hits(8191314), read hit percent(58)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(1675943), write replacement(44749030)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(104876788), metadata cleans(66629519)
+	metadata batch(165944201) metadata ssd writes(5562106)
+	cleanings(66629519) fallow cleanings(745613)
+	no room(32323033) front merge(19024848) back merge(46158906)
+	force_clean_block(0)
+	disk reads(5706726), disk writes(97018812) ssd reads(74820749) ssd writes(114210256)
+	uncached reads(1933517), uncached writes(30389516), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62225024), cache percent(99)
+	dirty blocks(38247269), dirty percent(61)
+	nr_queued(0)
+Size Hist: 4096:149164344 
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=2134: Tue Mar  3 13:12:41 2015
+  read : io=1024.0MB, bw=1578.2KB/s, iops=394, runt=664490msec
+  cpu          : usr=0.37%, sys=1.60%, ctx=295511, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=1578KB/s, minb=1578KB/s, maxb=1578KB/s, mint=664490msec, maxt=664490msec
+
+Disk stats (read/write):
+    dm-0: ios=262072/0, merge=0/0, ticks=653520/0, in_queue=653528, util=98.46%, aggrios=166179/74984, aggrmerge=1152933/1161734, aggrticks=329380/31764, aggrin_queue=360932, aggrutil=91.08%
+  sdb: ios=278657/98730, merge=2305866/0, ticks=56532/5156, in_queue=61312, util=8.24%
+  sdc: ios=53702/51238, merge=0/2323468, ticks=602228/58372, in_queue=660552, util=91.08%
+ssd:sdb
+ 7565971 70100582 621344024  7087112 12741112 101568212 916432624  5423844        1  3840240 12501496
+hdd:sdc
+  233863  5527028 46087128  1197104  3921307 95172104 795161208 29975704        0  6907524 31178852
+0 7814037168 flashcache stats: 
+	reads(14160184), writes(135266304)
+	read hits(8399756), read hit percent(59)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(1724221), write replacement(44749030)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(104876788), metadata cleans(69005635)
+	metadata batch(168269865) metadata ssd writes(5612558)
+	cleanings(69005635) fallow cleanings(788942)
+	no room(32328457) front merge(20409825) back merge(47106532)
+	force_clean_block(0)
+	disk reads(5760428), disk writes(99394992) ssd reads(77405371) ssd writes(114308986)
+	uncached reads(1938941), uncached writes(30389516), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62225024), cache percent(99)
+	dirty blocks(35871089), dirty percent(57)
+	nr_queued(0)
+Size Hist: 4096:149426488 
+32rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio-2.1.11
+Starting 1 process
+
+32rr4k: (groupid=0, jobs=1): err= 0: pid=2144: Tue Mar  3 13:18:58 2015
+  read : io=4096.0MB, bw=11114KB/s, iops=2778, runt=377396msec
+  cpu          : usr=1.56%, sys=5.28%, ctx=973585, majf=0, minf=39
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=1048576/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: io=4096.0MB, aggrb=11113KB/s, minb=11113KB/s, maxb=11113KB/s, mint=377396msec, maxt=377396msec
+
+Disk stats (read/write):
+    dm-0: ios=1048576/0, merge=0/0, ticks=12033560/0, in_queue=12036520, util=100.00%, aggrios=529948/87404, aggrmerge=44643/48997, aggrticks=5959644/13152, aggrin_queue=5972504, aggrutil=99.95%
+  sdb: ios=890039/172332, merge=89286/0, ticks=133332/16144, in_queue=149004, util=24.37%
+  sdc: ios=169858/2477, merge=0/97994, ticks=11785956/10160, in_queue=11796004, util=99.95%
+ssd:sdb
+ 8456014 70190057 629180696  7220452 12913448 101568212 917811312  5439988        0  3932140 12650508
+hdd:sdc
+  403721  5527028 47445992 12983060  3923788 95270350 795968136 29985864        0  7284444 42974856
+0 7814037168 flashcache stats: 
+	reads(15208760), writes(135266304)
+	read hits(9278474), read hit percent(61)
+	write hits(0) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(1894079), write replacement(44749030)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(104876788), metadata cleans(69106501)
+	metadata batch(168368253) metadata ssd writes(5615036)
+	cleanings(69106501) fallow cleanings(791296)
+	no room(32328457) front merge(20483799) back merge(47131002)
+	force_clean_block(0)
+	disk reads(5930286), disk writes(99495794) ssd reads(78384891) ssd writes(114481322)
+	uncached reads(1938941), uncached writes(30389516), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62225024), cache percent(99)
+	dirty blocks(35770287), dirty percent(57)
+	nr_queued(0)
+Size Hist: 4096:150475064 
+32rrw8k: (g=0): rw=randrw, bs=8K-8K/8K-8K/8K-8K, ioengine=libaio, iodepth=32
+fio-2.1.11
+Starting 1 process
+
+32rrw8k: (groupid=0, jobs=1): err= 0: pid=2157: Tue Mar  3 13:22:29 2015
+  read : io=2745.9MB, bw=13355KB/s, iops=1669, runt=210532msec
+  write: io=1350.2MB, bw=6567.6KB/s, iops=820, runt=210532msec
+  cpu          : usr=1.53%, sys=7.57%, ctx=574480, majf=0, minf=6
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=351466/w=172822/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: io=2745.9MB, aggrb=13355KB/s, minb=13355KB/s, maxb=13355KB/s, mint=210532msec, maxt=210532msec
+  WRITE: io=1350.2MB, aggrb=6567KB/s, minb=6567KB/s, maxb=6567KB/s, mint=210532msec, maxt=210532msec
+
+Disk stats (read/write):
+    dm-0: ios=703130/345622, merge=0/0, ticks=7629992/90556, in_queue=7731564, util=100.00%, aggrios=275711/249778, aggrmerge=588180/561410, aggrticks=3394370/164504, aggrin_queue=3558764, aggrutil=100.00%
+  sdb: ios=511948/459154, merge=1171242/140635, ticks=303540/59592, in_queue=362712, util=46.11%
+  sdc: ios=39475/40402, merge=5118/982186, ticks=6485200/269416, in_queue=6754816, util=100.00%
+ssd:sdb
+ 8967962 71361299 642646360  7523992 13372602 101708847 922609624  5499580        0  4029168 13013220
+hdd:sdc
+  443196  5532146 47802736 19468260  3964190 96252536 804163376 30255280        0  7494988 49729672
+0 7814037168 flashcache stats: 
+	reads(15912156), writes(135611948)
+	read hits(9937277), read hit percent(62)
+	write hits(323656) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(1938672), write replacement(44771018)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(105222432), metadata cleans(70130906)
+	metadata batch(169528750) metadata ssd writes(5824588)
+	cleanings(70130906) fallow cleanings(813881)
+	no room(32328457) front merge(21385471) back merge(47230314)
+	force_clean_block(0)
+	disk reads(5974879), disk writes(100520198) ssd reads(80068098) ssd writes(115081058)
+	uncached reads(1938941), uncached writes(30389516), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62225024), cache percent(99)
+	dirty blocks(35091526), dirty percent(56)
+	nr_queued(0)
+Size Hist: 4096:151524104 
+1rw4k: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1rw4k: (groupid=0, jobs=1): err= 0: pid=2175: Tue Mar  3 13:30:28 2015
+  write: io=1024.0MB, bw=2193.4KB/s, iops=548, runt=478062msec
+  cpu          : usr=0.60%, sys=3.04%, ctx=442457, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=262144/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=1024.0MB, aggrb=2193KB/s, minb=2193KB/s, maxb=2193KB/s, mint=478062msec, maxt=478062msec
+
+Disk stats (read/write):
+    dm-0: ios=231/262069, merge=0/0, ticks=12/466408, in_queue=466420, util=97.68%, aggrios=111350/318973, aggrmerge=1506649/1567814, aggrticks=49362/548576, aggrin_queue=597786, aggrutil=93.92%
+  sdb: ios=222701/479921, merge=3013298/0, ticks=98724/37920, in_queue=136252, util=13.62%
+  sdc: ios=0/158025, merge=0/3135628, ticks=0/1059232, in_queue=1059320, util=93.92%
+ssd:sdb
+ 9190663 74374597 668534952  7622716 13852523 101708847 926448992  5537500        0  4094224 13149472
+hdd:sdc
+  443196  5532146 47802736 19468260  4122215 99388164 830577872 31314512        0  7943660 50788992
+0 7814037168 flashcache stats: 
+	reads(15912620), writes(135874092)
+	read hits(9937741), read hit percent(62)
+	write hits(323656) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(1938672), write replacement(44965915)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(105418374), metadata cleans(73366516)
+	metadata batch(172676323) metadata ssd writes(6108567)
+	cleanings(73366516) fallow cleanings(875897)
+	no room(32394659) front merge(23388640) back merge(48400124)
+	force_clean_block(0)
+	disk reads(5974879), disk writes(103822008) ssd reads(83304170) ssd writes(115560978)
+	uncached reads(1938941), uncached writes(30455718), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62226069), cache percent(99)
+	dirty blocks(32051858), dirty percent(51)
+	nr_queued(0)
+Size Hist: 4096:151786712 
+32rw4k: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio-2.1.11
+Starting 1 process
+
+32rw4k: (groupid=0, jobs=1): err= 0: pid=2196: Tue Mar  3 13:42:29 2015
+  write: io=4096.0MB, bw=5815.6KB/s, iops=1453, runt=721227msec
+  cpu          : usr=1.49%, sys=6.13%, ctx=1060092, majf=0, minf=6
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=1048576/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+  WRITE: io=4096.0MB, aggrb=5815KB/s, minb=5815KB/s, maxb=5815KB/s, mint=721227msec, maxt=721227msec
+
+Disk stats (read/write):
+    dm-0: ios=231/1048576, merge=0/0, ticks=116/23037000, in_queue=23037948, util=100.00%, aggrios=20621/913773, aggrmerge=272107/285151, aggrticks=15032/11931918, aggrin_queue=11946518, aggrutil=100.00%
+  sdb: ios=41242/1520649, merge=544214/0, ticks=30064/64332, in_queue=93292, util=8.95%
+  sdc: ios=0/306898, merge=0/570303, ticks=0/23799504, in_queue=23799744, util=100.00%
+ssd:sdb
+ 9231905 74918811 673218672  7652780 15373172 101708847 938614184  5601832        0  4158704 13242768
+hdd:sdc
+  443196  5532146 47802736 19468260  4429113 99958467 837614184 55114016        0  8664928 74588736
+0 7814037168 flashcache stats: 
+	reads(15913084), writes(136922668)
+	read hits(9938205), read hit percent(62)
+	write hits(323656) write hit percent(0)
+	dirty write hits(0) dirty write hit percent(0)
+	replacement(1938672), write replacement(45715632)
+	write invalidates(0), read invalidates(0)
+	pending enqueues(0), pending inval(0)
+	metadata dirties(106172412), metadata cleans(73951517)
+	metadata batch(173248751) metadata ssd writes(6875178)
+	cleanings(73951517) fallow cleanings(887254)
+	no room(32689197) front merge(23749965) back merge(48611961)
+	force_clean_block(0)
+	disk reads(5974879), disk writes(104701547) ssd reads(83889635) ssd writes(117081611)
+	uncached reads(1938941), uncached writes(30750256), uncached IO requeue(0)
+	disk read errors(0), disk write errors(0) ssd read errors(0) ssd write errors(0)
+	uncached sequential reads(0), uncached sequential writes(0)
+	pid_adds(0), pid_dels(0), pid_drops(0) pid_expiry(0)
+	lru hot blocks(31135232), lru warm blocks(31135232)
+	lru promotions(0), lru demotions(0)
+0 7814037168 flashcache conf:
+	ssd dev (/dev/sdb), disk dev (/dev/sdc) cache mode(WRITE_BACK)
+	capacity(243244M), associativity(512), data block size(4K) metadata block size(4096b)
+	disk assoc(256K)
+	skip sequential thresh(0K)
+	total blocks(62270464), cached blocks(62230390), cache percent(99)
+	dirty blocks(32220895), dirty percent(51)
+	nr_queued(0)
+Size Hist: 4096:152835752 
+             total       used       free     shared    buffers     cached
+Mem:         15761       1763      13997          0         15        102
+-/+ buffers/cache:       1645      14116
+Swap:        16106          0      16106
+Tue Mar  3 13:42:29 EST 2015

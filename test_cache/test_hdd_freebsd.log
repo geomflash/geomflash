@@ -1,0 +1,293 @@
+FreeBSD gflash 10.1-RELEASE-p5 FreeBSD 10.1-RELEASE-p5 #0: Tue Jan 27 08:55:07 UTC 2015     root@amd64-builder.daemonology.net:/usr/obj/usr/src/sys/GENERIC  amd64
+Geom name: ada2
+Providers:
+1. Name: ada2
+   Mediasize: 4000787030016 (3.6T)
+   Sectorsize: 512
+   Mode: r0w0e0
+   descr: WDC WD4000FYYZ-01UL1B2
+   lunid: 50014ee2b5659216
+   ident: WD-WCC133L4Y9LH
+   fwsectors: 63
+   fwheads: 16
+
+Thu Mar 12 10:36:46 EET 2015
+ada2            33.0         0.0         79.5          0.0    0        0.1       0.1 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100218: Thu Mar 12 10:37:35 2015
+  read : io=8192.0MB, bw=173623KB/s, iops=1356, runt= 48315msec
+  cpu          : usr=0.53%, sys=1.16%, ctx=65539, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=173623KB/s, minb=173623KB/s, maxb=173623KB/s, mint=48315msec, maxt=48315msec
+ada2         65635.0         0.0    8388846.5          0.0    0       47.6      47.6 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100220: Thu Mar 12 10:38:23 2015
+  read : io=8192.0MB, bw=173656KB/s, iops=1356, runt= 48306msec
+  cpu          : usr=0.39%, sys=1.31%, ctx=65541, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=173655KB/s, minb=173655KB/s, maxb=173655KB/s, mint=48306msec, maxt=48306msec
+ada2        131237.0         0.0   16777613.5          0.0    0       95.1      95.1 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100222: Thu Mar 12 10:39:12 2015
+  read : io=8192.0MB, bw=173648KB/s, iops=1356, runt= 48308msec
+  cpu          : usr=0.45%, sys=1.24%, ctx=65541, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=173648KB/s, minb=173648KB/s, maxb=173648KB/s, mint=48308msec, maxt=48308msec
+ada2        196839.0         0.0   25166380.5          0.0    0      142.6     142.6 
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=100224: Thu Mar 12 11:04:17 2015
+  read : io=1024.0MB, bw=713820B/s, iops=174, runt=1504219msec
+  cpu          : usr=0.06%, sys=0.10%, ctx=262160, majf=0, minf=1
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=697KB/s, minb=697KB/s, maxb=697KB/s, mint=1504219msec, maxt=1504219msec
+ada2        459049.0         0.0   26215115.5          0.0    0     1644.1    1644.1 
+32rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+...
+fio-2.1.9
+Starting 32 threads
+
+32rr4k: (groupid=0, jobs=32): err= 0: pid=100229: Thu Mar 12 11:42:04 2015
+  read : io=4096.0MB, bw=1850.8KB/s, iops=462, runt=2266243msec
+  cpu          : usr=0.00%, sys=0.01%, ctx=1048637, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=1048576/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=4096.0MB, aggrb=1850KB/s, minb=1850KB/s, maxb=1850KB/s, mint=2266243msec, maxt=2266243msec
+ada2       1508714.0         0.0   30412043.0          0.0    0    73886.2    3910.6 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100264: Thu Mar 12 11:42:28 2015
+  write: io=4096.0MB, bw=173641KB/s, iops=1356, runt= 24155msec
+  cpu          : usr=1.23%, sys=1.24%, ctx=32771, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=32768/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=4096.0MB, aggrb=173641KB/s, minb=173641KB/s, maxb=173641KB/s, mint=24155msec, maxt=24155msec
+ada2       1508780.0     32768.0   30412202.0    4194304.0    0    73909.8    3934.2 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100266: Thu Mar 12 11:48:57 2015
+  write: io=65536MB, bw=173047KB/s, iops=1351, runt=387807msec
+  cpu          : usr=1.11%, sys=1.34%, ctx=524327, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=173047KB/s, minb=173047KB/s, maxb=173047KB/s, mint=387807msec, maxt=387807msec
+ada2       1508846.0    557056.0   30412361.0   71303168.0    0    74288.2    4312.6 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100268: Thu Mar 12 11:55:27 2015
+  write: io=65536MB, bw=172149KB/s, iops=1344, runt=389829msec
+  cpu          : usr=1.03%, sys=1.41%, ctx=524325, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=172149KB/s, minb=172149KB/s, maxb=172149KB/s, mint=389829msec, maxt=389829msec
+ada2       1508912.0   1081344.0   30412520.0  138412032.0    0    74668.6    4693.0 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100272: Thu Mar 12 12:01:57 2015
+  write: io=65536MB, bw=171973KB/s, iops=1343, runt=390230msec
+  cpu          : usr=1.04%, sys=1.40%, ctx=524317, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=171972KB/s, minb=171972KB/s, maxb=171972KB/s, mint=390230msec, maxt=390230msec
+ada2       1508978.0   1605632.0   30412679.0  205520896.0    0    75049.4    5073.9 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100275: Thu Mar 12 12:08:29 2015
+  write: io=65536MB, bw=171685KB/s, iops=1341, runt=390883msec
+  cpu          : usr=1.03%, sys=1.46%, ctx=524321, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=171685KB/s, minb=171685KB/s, maxb=171685KB/s, mint=390883msec, maxt=390883msec
+ada2       1509044.0   2129920.0   30412838.0  272629760.0    0    75430.6    5455.2 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100277: Thu Mar 12 12:15:01 2015
+  write: io=65536MB, bw=171191KB/s, iops=1337, runt=392012msec
+  cpu          : usr=1.17%, sys=1.26%, ctx=524326, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=171190KB/s, minb=171190KB/s, maxb=171190KB/s, mint=392012msec, maxt=392012msec
+ada2       1509110.0   2654208.0   30412997.0  339738624.0    0    75813.2    5837.8 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100279: Thu Mar 12 12:21:35 2015
+  write: io=65536MB, bw=170610KB/s, iops=1332, runt=393347msec
+  cpu          : usr=1.09%, sys=1.39%, ctx=524328, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170609KB/s, minb=170609KB/s, maxb=170609KB/s, mint=393347msec, maxt=393347msec
+ada2       1509176.0   3178496.0   30413156.0  406847488.0    0    76197.0    6221.5 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100281: Thu Mar 12 12:28:09 2015
+  write: io=65536MB, bw=170664KB/s, iops=1333, runt=393221msec
+  cpu          : usr=1.11%, sys=1.38%, ctx=524315, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170664KB/s, minb=170664KB/s, maxb=170664KB/s, mint=393221msec, maxt=393221msec
+ada2       1509242.0   3702784.0   30413315.0  473956352.0    0    76580.4    6605.1 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100284: Thu Mar 12 12:34:44 2015
+  write: io=65536MB, bw=170018KB/s, iops=1328, runt=394717msec
+  cpu          : usr=1.12%, sys=1.29%, ctx=524326, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170017KB/s, minb=170017KB/s, maxb=170017KB/s, mint=394717msec, maxt=394717msec
+ada2       1509308.0   4227072.0   30413474.0  541065216.0    0    76965.7    6990.4 
+32rrw8k: (g=0): rw=randrw, bs=8K-8K/8K-8K/8K-8K, ioengine=sync, iodepth=1
+...
+fio-2.1.9
+Starting 32 threads
+
+32rrw8k: (groupid=0, jobs=32): err= 0: pid=100286: Thu Mar 12 12:53:42 2015
+  read : io=2753.0MB, bw=2479.6KB/s, iops=309, runt=1137157msec
+  write: io=1343.0MB, bw=1209.4KB/s, iops=151, runt=1137157msec
+  cpu          : usr=0.00%, sys=0.01%, ctx=524303, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=352384/w=171904/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=2753.0MB, aggrb=2479KB/s, minb=2479KB/s, maxb=2479KB/s, mint=1137157msec, maxt=1137157msec
+  WRITE: io=1343.0MB, aggrb=1209KB/s, minb=1209KB/s, maxb=1209KB/s, mint=1137157msec, maxt=1137157msec
+ada2       1862781.0   4398976.0   33235169.5  542440448.0    0   113076.0    8127.7 
+1rw4k: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1rw4k: (groupid=0, jobs=1): err= 0: pid=100319: Thu Mar 12 13:02:36 2015
+  write: io=1024.0MB, bw=1965.5KB/s, iops=491, runt=533510msec
+  cpu          : usr=0.16%, sys=0.30%, ctx=262151, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=262144/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=1024.0MB, aggrb=1965KB/s, minb=1965KB/s, maxb=1965KB/s, mint=533510msec, maxt=533510msec
+ada2       1862847.0   4661120.0   33235328.5  543489024.0    0   113606.9    8659.0 
+32rw4k: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+...
+fio-2.1.9
+Starting 32 threads
+
+32rw4k: (groupid=0, jobs=32): err= 0: pid=100324: Thu Mar 12 13:37:52 2015
+  write: io=4096.0MB, bw=1983.7KB/s, iops=495, runt=2114465msec
+  cpu          : usr=0.01%, sys=0.01%, ctx=1048655, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=1048576/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=4096.0MB, aggrb=1983KB/s, minb=1983KB/s, maxb=1983KB/s, mint=2114465msec, maxt=2114465msec
+ada2       1863936.0   5709696.0   33237952.0  547683328.0    0   181258.1   10774.1 
+Thu Mar 12 13:37:52 EET 2015

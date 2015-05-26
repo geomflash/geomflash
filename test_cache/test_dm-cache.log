@@ -1,0 +1,561 @@
+Linux ubuntu 3.16.0-31-generic #41-Ubuntu SMP Tue Feb 10 15:24:04 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+/dev/sdc:
+
+ Model=WDC WD4000FYYZ-01UL1B2, FwRev=01.01K03, SerialNo=WD-WCC133L4Y9LH
+ Config={ HardSect NotMFM HdSw>15uSec SpinMotCtl Fixed DTR>5Mbs FmtGapReq }
+ RawCHS=16383/16/63, TrkSize=0, SectSize=0, ECCbytes=0
+ BuffType=unknown, BuffSize=unknown, MaxMultSect=16, MultSect=16
+ CurCHS=16383/16/63, CurSects=16514064, LBA=yes, LBAsects=7814037168
+ IORDY=on/off, tPIO={min:120,w/IORDY:120}, tDMA={min:120,rec:120}
+ PIO modes:  pio0 pio3 pio4 
+ DMA modes:  mdma0 mdma1 mdma2 
+ UDMA modes: udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+ AdvancedPM=yes: unknown setting WriteCache=enabled
+ Drive conforms to: Unspecified:  ATA/ATAPI-1,2,3,4,5,6,7
+
+ * signifies the current active mode
+
+
+/dev/sdb:
+
+ Model=Samsung SSD 850 PRO 256GB, FwRev=EXM01B6Q, SerialNo=S1SUNWAFA01434D
+ Config={ Fixed }
+ RawCHS=16383/16/63, TrkSize=0, SectSize=0, ECCbytes=0
+ BuffType=unknown, BuffSize=unknown, MaxMultSect=1, MultSect=1
+ CurCHS=16383/16/63, CurSects=16514064, LBA=yes, LBAsects=500118192
+ IORDY=on/off, tPIO={min:120,w/IORDY:120}, tDMA={min:120,rec:120}
+ PIO modes:  pio0 pio1 pio2 pio3 pio4 
+ DMA modes:  mdma0 mdma1 mdma2 
+ UDMA modes: udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+ AdvancedPM=no WriteCache=enabled
+ Drive conforms to: unknown:  ATA/ATAPI-2,3,4,5,6,7
+
+ * signifies the current active mode
+
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=1854: Mon Mar  9 07:16:52 2015
+  read : io=1024.0MB, bw=87622KB/s, iops=21905, runt= 11967msec
+  cpu          : usr=7.32%, sys=23.06%, ctx=262170, majf=0, minf=8
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=87622KB/s, minb=87622KB/s, maxb=87622KB/s, mint=11967msec, maxt=11967msec
+
+Disk stats (read/write):
+  sdb: ios=260818/0, merge=0/0, ticks=7752/0, in_queue=7680, util=64.01%
+             total       used       free     shared    buffers     cached
+Mem:         15761        268      15492          0         14         58
+-/+ buffers/cache:        195      15566
+Swap:        16106          0      16106
+create_dm-cache
+             total       used       free     shared    buffers     cached
+Mem:         15761        398      15362          0         14         59
+-/+ buffers/cache:        324      15436
+Swap:        16106          0      16106
+Mon Mar  9 07:17:02 EDT 2015
+ssd:sdb
+  262734      652  2107088     7848       53     1937    17760      216        0     7820     7992
+     341        0     2728       24     1975        0    15712    18600        0       60    18624
+     438        0     3504        8       16        0     2048        4        0       12       12
+hdd:sdc
+     277      232     5992      132        0        0        0        0        0      120      132
+0 7814037168 cache 8 1940/4840 512 4/976717 202 22 0 0 0 4 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=1925: Mon Mar  9 07:17:51 2015
+  read : io=8192.0MB, bw=173620KB/s, iops=1356, runt= 48316msec
+  cpu          : usr=1.17%, sys=7.55%, ctx=65567, majf=0, minf=39
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=173619KB/s, minb=173619KB/s, maxb=173619KB/s, mint=48316msec, maxt=48316msec
+ssd:sdb
+  262734      652  2107088     7848       56     1937    17768      220        0     7824     7996
+     341        0     2728       24     1978        0    15720    18604        0       64    18628
+     438        0     3504        8       16        0     2048        4        0       12       12
+hdd:sdc
+   65813      232 16783208    44124        0        0        0        0        0    44020    44032
+0 7814037168 cache 8 1940/4840 512 4/976717 202 65558 0 0 0 4 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=1935: Mon Mar  9 07:22:15 2015
+  read : io=8192.0MB, bw=31746KB/s, iops=248, runt=264241msec
+  cpu          : usr=0.24%, sys=1.33%, ctx=65597, majf=0, minf=39
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=31746KB/s, minb=31746KB/s, maxb=31746KB/s, mint=264241msec, maxt=264241msec
+ssd:sdb
+  328332      652 18884800    29680   331428    63784 18367856   209580        0   234788   238776
+     403        0     3224       32   264125        0  1588592   212052        0   186160   212084
+   65974        0 16780720    21976   131088        0 16779264    26576        0    41920    48552
+hdd:sdc
+  185179    11938 33560424   122772        0        0        0        0        0    78384   122580
+0 7814037168 cache 8 1940/4840 512 32772/976717 65738 65558 0 0 0 32772 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=1943: Mon Mar  9 07:22:43 2015
+  read : io=8192.0MB, bw=309829KB/s, iops=2420, runt= 27075msec
+  cpu          : usr=2.19%, sys=8.26%, ctx=65554, majf=0, minf=38
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=309828KB/s, minb=309828KB/s, maxb=309828KB/s, mint=27075msec, maxt=27075msec
+ssd:sdb
+  393868      652 35662016    53896   331431    63784 18367864   209580        0   258940   262928
+     403        0     3224       32   264128        0  1588600   212052        0   186160   212084
+  131510        0 33557936    46280   131088        0 16779264    26576        0    66224    72856
+hdd:sdc
+  185179    11938 33560424   122772        0        0        0        0        0    78384   122580
+0 7814037168 cache 8 1940/4840 512 32772/976717 131274 65558 0 0 0 32772 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=1953: Mon Mar  9 07:23:15 2015
+  read : io=1024.0MB, bw=33061KB/s, iops=8265, runt= 31716msec
+  cpu          : usr=2.95%, sys=17.96%, ctx=262171, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=33061KB/s, minb=33061KB/s, maxb=33061KB/s, mint=31716msec, maxt=31716msec
+ssd:sdb
+  656012      652 37759168    78620   331434    63784 18367872   209584        0   283572   287560
+     403        0     3224       32   264131        0  1588608   212056        0   186164   212088
+  393654        0 35655088    71508   131088        0 16779264    26576        0    91448    98080
+hdd:sdc
+  185179    11938 33560424   122772        0        0        0        0        0    78384   122580
+0 7814037168 cache 8 1940/4840 512 32772/976717 393418 65558 0 0 0 32772 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+32rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio-2.1.11
+Starting 1 process
+
+32rr4k: (groupid=0, jobs=1): err= 0: pid=1963: Mon Mar  9 07:23:26 2015
+  read : io=4096.0MB, bw=387644KB/s, iops=96910, runt= 10820msec
+  cpu          : usr=9.46%, sys=90.49%, ctx=1076, majf=0, minf=37
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=1048576/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: io=4096.0MB, aggrb=387643KB/s, minb=387643KB/s, maxb=387643KB/s, mint=10820msec, maxt=10820msec
+ssd:sdb
+ 1704588      652 46147776   240316   331437    63784 18367880   209588        0   294396   449136
+     403        0     3224       32   264134        0  1588616   212060        0   186168   212092
+ 1442230        0 44043696   233348   131088        0 16779264    26576        0   102268   260028
+hdd:sdc
+  185179    11938 33560424   122772        0        0        0        0        0    78384   122580
+0 7814037168 cache 8 1940/4840 512 32772/976717 1441994 65558 0 0 0 32772 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=1973: Mon Mar  9 07:26:33 2015
+  write: io=4096.0MB, bw=22481KB/s, iops=175, runt=186575msec
+  cpu          : usr=0.33%, sys=0.67%, ctx=32792, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=32768/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=4096.0MB, aggrb=22480KB/s, minb=22480KB/s, maxb=22480KB/s, mint=186575msec, maxt=186575msec
+ssd:sdb
+ 1817204    19593 62928872   276496   524936    99700 35933216   331760        0   430048   607188
+     440        0     3520       40   395233        0  2375200   316460        0   286944   316496
+ 1573750        0 60824496   279428   229404        0 33558016    52064        0   137744   331596
+hdd:sdc
+  239408    23273 41950696   172744   112276    18796 16777216   176840        0   155172   349276
+0 7814037168 cache 8 1940/4840 512 49159/976717 1442442 65558 32768 0 0 49159 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=1993: Mon Mar  9 08:18:15 2015
+  write: io=65536MB, bw=21639KB/s, iops=169, runt=3101350msec
+  cpu          : usr=0.31%, sys=0.63%, ctx=524666, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=21638KB/s, minb=21638KB/s, maxb=21638KB/s, mint=3101350msec, maxt=3101350msec
+ssd:sdb
+ 3688451   246465 331372064   868356  3887773   406882 316951592  2309648        0  2603968  3172264
+     959        0     7672      148  2492388        0 14958120  1985044        0  1899512  1985176
+ 3671350        0 329263536   989232  1802268        0 301993472   455184        0   708080  1444528
+hdd:sdc
+ 1141579   169694 176168552  1132736  1982635   245589 285212672  3389960        0  1502536  4520200
+0 7814037168 cache 8 1940/4840 512 311303/976717 1442890 65558 557056 0 0 311303 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2032: Mon Mar  9 09:10:51 2015
+  write: io=65536MB, bw=21265KB/s, iops=166, runt=3155864msec
+  cpu          : usr=0.30%, sys=0.67%, ctx=524680, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=21264KB/s, minb=21264KB/s, maxb=21264KB/s, mint=3155864msec, maxt=3155864msec
+ssd:sdb
+ 5571661   461374 599815256  1470728  7274126   690548 597969968  4418780        0  4907836  5879284
+    1478        0    11824      260  4589543        0 27541040  3782316        0  3639704  3782564
+ 5768950        0 597702576  1703716  3375132        0 570428928   864204        0  1280760  2568032
+hdd:sdc
+ 2037583   322282 310386408  1997844  3864971   460405 553648128  6467584        0  2776580  8460744
+0 7814037168 cache 8 1940/4840 512 573447/976717 1443338 65558 1081344 0 0 573447 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2069: Mon Mar  9 10:09:31 2015
+  write: io=65536MB, bw=19071KB/s, iops=148, runt=3518821msec
+  cpu          : usr=0.28%, sys=0.66%, ctx=524729, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=19071KB/s, minb=19071KB/s, maxb=19071KB/s, mint=3518821msec, maxt=3518821msec
+ssd:sdb
+ 7427696   703458 868258448  2081892 10638318   996375 878988344  6947508        0  7633484  9014628
+    1997        0    15976      412  6686698        0 40123960  5994000        0  5793744  5994404
+ 7866550        0 866141616  2443124  4947996        0 838864384  1290988        0  1862024  3734216
+hdd:sdc
+ 2911430   497027 444604264  2788208  5720101   702427 822083584  9324296        0  3984956 12105564
+0 7814037168 cache 8 1940/4840 512 835591/976717 1443786 65558 1605632 0 0 835591 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2110: Mon Mar  9 10:44:27 2015
+  write: io=65536MB, bw=32026KB/s, iops=250, runt=2095479msec
+  cpu          : usr=0.43%, sys=1.31%, ctx=524579, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=32025KB/s, minb=32025KB/s, maxb=32025KB/s, mint=2095479msec, maxt=2095479msec
+ssd:sdb
+ 8437476   823413 1012777288  2418000 12426010  1184450 1030275424  8325124        0  9121788 10725832
+    2276        0    18208      500  7815709        0 46898016  7201568        0  6972528  7202056
+ 8996006        0 1010658224  2844356  5794752        0 983377408  1516792        0  2176912  4361244
+hdd:sdc
+ 3390524   582453 516860904  3221984  6971272   822300 1028557824 11046188        0  4798804 14259720
+0 7814037168 cache 8 1940/4840 512 976717/976717 1444234 65558 1887884 242036 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2140: Mon Mar  9 10:50:59 2015
+  write: io=65536MB, bw=171205KB/s, iops=1337, runt=391980msec
+  cpu          : usr=2.15%, sys=7.90%, ctx=524570, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=171204KB/s, minb=171204KB/s, maxb=171204KB/s, mint=391980msec, maxt=391980msec
+ssd:sdb
+ 8437734   823604 1012780880  2418020 12426013  1184450 1030275432  8325136        0  9121820 10725864
+    2277        0    18216      500  7815712        0 46898024  7201580        0  6972540  7202068
+ 8996454        0 1010661808  2844376  5794752        0 983377408  1516792        0  2176932  4361264
+hdd:sdc
+ 3390540   582453 516861032  3221984  7495560   822300 1162775552 11399028        0  5150716 14611632
+0 7814037168 cache 8 1940/4840 512 976717/976717 1444682 65558 1887884 766324 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2160: Mon Mar  9 10:57:33 2015
+  write: io=65536MB, bw=170635KB/s, iops=1333, runt=393289msec
+  cpu          : usr=2.12%, sys=8.16%, ctx=524553, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170634KB/s, minb=170634KB/s, maxb=170634KB/s, mint=393289msec, maxt=393289msec
+ssd:sdb
+ 8438012   823775 1012784472  2418108 12426016  1184450 1030275440  8325144        0  9121840 10725960
+    2278        0    18224      500  7815715        0 46898032  7201588        0  6972548  7202076
+ 8996902        0 1010665392  2844524  5794752        0 983377408  1516792        0  2176948  4361412
+hdd:sdc
+ 3390556   582453 516861160  3221984  8019848   822300 1296993280 11751828        0  5502560 14963476
+0 7814037168 cache 8 1940/4840 512 976717/976717 1445130 65558 1887884 1290612 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2180: Mon Mar  9 11:04:07 2015
+  write: io=65536MB, bw=170702KB/s, iops=1333, runt=393134msec
+  cpu          : usr=2.01%, sys=8.44%, ctx=524580, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170702KB/s, minb=170702KB/s, maxb=170702KB/s, mint=393134msec, maxt=393134msec
+ssd:sdb
+ 8438304   823932 1012788064  2418192 12426019  1184450 1030275448  8325148        0  9121864 10726048
+    2279        0    18232      500  7815718        0 46898040  7201592        0  6972552  7202080
+ 8997350        0 1010668976  2844724  5794752        0 983377408  1516792        0  2176968  4361612
+hdd:sdc
+ 3390572   582453 516861288  3221984  8544136   822300 1431211008 12103636        0  5853416 15314332
+0 7814037168 cache 8 1940/4840 512 976717/976717 1445578 65558 1887884 1814900 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=2197: Mon Mar  9 11:10:41 2015
+  write: io=65536MB, bw=170140KB/s, iops=1329, runt=394433msec
+  cpu          : usr=2.01%, sys=8.57%, ctx=524576, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170140KB/s, minb=170140KB/s, maxb=170140KB/s, mint=394433msec, maxt=394433msec
+ssd:sdb
+ 8438550   824135 1012791656  2418212 12426022  1184450 1030275456  8325152        0  9121888 10726072
+    2280        0    18240      500  7815721        0 46898048  7201596        0  6972556  7202084
+ 8997798        0 1010672560  2844932  5794752        0 983377408  1516792        0  2176988  4361820
+hdd:sdc
+ 3390588   582453 516861416  3221988  9068424   822300 1565428736 12456364        0  6205164 15666080
+0 7814037168 cache 8 1940/4840 512 976717/976717 1446026 65558 1887884 2339188 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=2216: Mon Mar  9 11:11:10 2015
+  read : io=8192.0MB, bw=299925KB/s, iops=2343, runt= 27969msec
+  cpu          : usr=2.13%, sys=11.04%, ctx=65549, majf=0, minf=39
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=299925KB/s, minb=299925KB/s, maxb=299925KB/s, mint=27969msec, maxt=27969msec
+ssd:sdb
+ 8504087   824135 1029568880  2442668 12426025  1184450 1030275464  8325156        0  9146288 10750472
+    2281        0    18248      500  7815724        0 46898056  7201600        0  6972560  7202088
+ 9063334        0 1027449776  2869440  5794752        0 983377408  1516792        0  2201492  4386324
+hdd:sdc
+ 3390588   582453 516861416  3221988  9068424   822300 1565428736 12456364        0  6205164 15666080
+0 7814037168 cache 8 1940/4840 512 976717/976717 1511562 65558 1887884 2339188 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=2224: Mon Mar  9 11:11:37 2015
+  read : io=8192.0MB, bw=310471KB/s, iops=2425, runt= 27019msec
+  cpu          : usr=2.51%, sys=7.76%, ctx=65554, majf=0, minf=38
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=310470KB/s, minb=310470KB/s, maxb=310470KB/s, mint=27019msec, maxt=27019msec
+ssd:sdb
+ 8569623   824135 1046346096  2466696 12426028  1184450 1030275472  8325160        0  9170248 10774432
+    2281        0    18248      500  7815727        0 46898064  7201604        0  6972564  7202092
+ 9128870        0 1044226992  2893556  5794752        0 983377408  1516792        0  2225608  4410440
+hdd:sdc
+ 3390588   582453 516861416  3221988  9068424   822300 1565428736 12456364        0  6205164 15666080
+0 7814037168 cache 8 1940/4840 512 976717/976717 1577098 65558 1887884 2339188 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=2232: Mon Mar  9 11:12:04 2015
+  read : io=8192.0MB, bw=309748KB/s, iops=2419, runt= 27082msec
+  cpu          : usr=2.26%, sys=8.16%, ctx=65559, majf=0, minf=38
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=309748KB/s, minb=309748KB/s, maxb=309748KB/s, mint=27082msec, maxt=27082msec
+ssd:sdb
+ 8635159   824135 1063123312  2491156 12426031  1184450 1030275480  8325164        0  9194648 10798832
+    2281        0    18248      500  7815730        0 46898072  7201608        0  6972568  7202096
+ 9194406        0 1061004208  2918080  5794752        0 983377408  1516792        0  2250132  4434964
+hdd:sdc
+ 3390588   582453 516861416  3221988  9068424   822300 1565428736 12456364        0  6205164 15666080
+0 7814037168 cache 8 1940/4840 512 976717/976717 1642634 65558 1887884 2339188 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=2240: Mon Mar  9 11:12:36 2015
+  read : io=1024.0MB, bw=33090KB/s, iops=8272, runt= 31689msec
+  cpu          : usr=2.60%, sys=18.12%, ctx=262172, majf=0, minf=7
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=33089KB/s, minb=33089KB/s, maxb=33089KB/s, mint=31689msec, maxt=31689msec
+ssd:sdb
+ 8897303   824135 1065220464  2515952 12426034  1184450 1030275488  8325168        0  9219364 10823548
+    2281        0    18248      500  7815733        0 46898080  7201612        0  6972572  7202100
+ 9456550        0 1063101360  2943332  5794752        0 983377408  1516792        0  2275372  4460204
+hdd:sdc
+ 3390588   582453 516861416  3221988  9068424   822300 1565428736 12456364        0  6205164 15666080
+0 7814037168 cache 8 1940/4840 512 976717/976717 1904778 65558 1887884 2339188 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+32rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio-2.1.11
+Starting 1 process
+
+32rr4k: (groupid=0, jobs=1): err= 0: pid=2249: Mon Mar  9 11:12:48 2015
+  read : io=4096.0MB, bw=387393KB/s, iops=96848, runt= 10827msec
+  cpu          : usr=10.26%, sys=89.67%, ctx=1111, majf=0, minf=37
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=1048576/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: io=4096.0MB, aggrb=387392KB/s, minb=387392KB/s, maxb=387392KB/s, mint=10827msec, maxt=10827msec
+ssd:sdb
+ 9945879   824135 1073609072  2677300 12426037  1184450 1030275496  8325168        0  9230192 10984812
+    2281        0    18248      500  7815736        0 46898088  7201612        0  6972572  7202100
+10505126        0 1071489968  3104772  5794752        0 983377408  1516792        0  2286200  4621760
+hdd:sdc
+ 3390588   582453 516861416  3221988  9068424   822300 1565428736 12456364        0  6205164 15666080
+0 7814037168 cache 8 1940/4840 512 976717/976717 2953354 65558 1887884 2339188 0 976717 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+32rrw8k: (g=0): rw=randrw, bs=8K-8K/8K-8K/8K-8K, ioengine=libaio, iodepth=32
+fio-2.1.11
+Starting 1 process
+
+32rrw8k: (groupid=0, jobs=1): err= 0: pid=2259: Mon Mar  9 11:22:42 2015
+  read : io=2745.9MB, bw=4733.2KB/s, iops=591, runt=594045msec
+  write: io=1350.2MB, bw=2327.5KB/s, iops=290, runt=594045msec
+  cpu          : usr=0.23%, sys=1.54%, ctx=120486, majf=0, minf=5
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=351466/w=172822/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: io=2745.9MB, aggrb=4733KB/s, minb=4733KB/s, maxb=4733KB/s, mint=594045msec, maxt=594045msec
+  WRITE: io=1350.2MB, aggrb=2327KB/s, minb=2327KB/s, maxb=2327KB/s, mint=594045msec, maxt=594045msec
+ssd:sdb
+10470716  1342110 1167702288 12744820 12598862  1184450 1033040656  8453244        0  9326144 21180212
+    2281        0    18248      500  7815739        0 46898096  7201616        0  6972576  7202104
+11547972        0 1165583184 42174896  5967574        0 986142560  1644980        0  2382168 43820132
+hdd:sdc
+ 3390596   582453 516861480  3221988  9240177  1340634 1653862400 95355156       68  6799504 98607212
+0 7814037168 cache 8 1940/4840 512 976717/976717 3305044 65558 2060706 2339188 0 976717 67 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+1rw4k: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=1
+fio-2.1.11
+Starting 1 process
+
+1rw4k: (groupid=0, jobs=1): err= 0: pid=2286: Mon Mar  9 11:47:21 2015
+  write: io=1024.0MB, bw=726238B/s, iops=177, runt=1478497msec
+  cpu          : usr=0.24%, sys=1.26%, ctx=262648, majf=0, minf=6
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=262144/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=1024.0MB, aggrb=709KB/s, minb=709KB/s, maxb=709KB/s, mint=1478497msec, maxt=1478497msec
+ssd:sdb
+11213016  1386885 1268426408 13251220 13334225  1291065 1054245560  8996964        0  9841180 22229264
+    2350        0    18800      556  8332350        0 49997752  7669812        0  7359276  7670356
+12334978        0 1266306752 42755736  6293450        0 1004247808  1756372        0  2529184 44512456
+hdd:sdc
+ 3510001   592204 533392968  5068264  9876221  1535215 1755142752 108599492        1  7961860 113658288
+0 7814037168 cache 8 1940/4840 512 976717/976717 3305154 65558 2257430 2404608 32288 1009005 0 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+32rw4k: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio-2.1.11
+Starting 1 process
+
+32rw4k: (groupid=0, jobs=1): err= 0: pid=2313: Mon Mar  9 12:49:47 2015
+  write: io=4096.0MB, bw=1119.9KB/s, iops=279, runt=3745486msec
+  cpu          : usr=0.11%, sys=0.63%, ctx=248720, majf=0, minf=5
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=1048576/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+  WRITE: io=4096.0MB, aggrb=1119KB/s, minb=1119KB/s, maxb=1119KB/s, mint=3745486msec, maxt=3745486msec
+ssd:sdb
+12437060  4091828 1771442776 65295084 14642737  1411985 1080786888 10493736        0 10610252 75768740
+    2422        0    19376      776  8648855        0 51897616  8232352        0  7705516  8233116
+16264892        0 1769322544 250208052  7407553        0 1028889272  2931076        0  3120748 253139668
+hdd:sdc
+ 3547625   685655 550170216 30677448 10933093  4427629 2258622632 530879412      116 11676016 561595400
+0 7814037168 cache 8 1940/4840 512 976717/976717 3305264 65558 3240461 2470153 65056 1041773 115 1 writeback 2 migration_threshold 33554432 mq 10 random_threshold 4 sequential_threshold 2840207360 discard_promote_adjustment 1 read_promote_adjustment 2 write_promote_adjustment 0
+             total       used       free     shared    buffers     cached
+Mem:         15761        425      15336          0         15         59
+-/+ buffers/cache:        350      15410
+Swap:        16106          0      16106
+Mon Mar  9 12:49:47 EDT 2015

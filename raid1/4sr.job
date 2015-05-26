@@ -1,0 +1,26 @@
+; job fio
+
+[global]
+filename=/dev/md0
+direct=1
+size=1g
+bs=128k
+group_reporting
+thread
+gtod_reduce=1
+
+[sr]
+rw=read
+offset=2g
+
+[sr]
+rw=read
+offset=6g
+
+[sr]
+rw=read
+offset=3022g
+
+[sr]
+rw=read
+offset=3026g

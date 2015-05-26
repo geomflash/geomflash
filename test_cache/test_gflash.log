@@ -1,0 +1,700 @@
+FreeBSD gflash 10.1-RELEASE-p5 FreeBSD 10.1-RELEASE-p5 #0: Tue Jan 27 08:55:07 UTC 2015     root@amd64-builder.daemonology.net:/usr/obj/usr/src/sys/GENERIC  amd64
+Geom name: ada2
+Providers:
+1. Name: ada2
+   Mediasize: 4000787030016 (3.6T)
+   Sectorsize: 512
+   Mode: r0w0e0
+   descr: WDC WD4000FYYZ-01UL1B2
+   lunid: 50014ee2b5659216
+   ident: WD-WCC133L4Y9LH
+   fwsectors: 63
+   fwheads: 16
+
+Geom name: ada1
+Providers:
+1. Name: ada1
+   Mediasize: 256060514304 (238G)
+   Sectorsize: 512
+   Mode: r0w0e0
+   descr: Samsung SSD 850 PRO 256GB
+   lunid: 500253887003d609
+   ident: S1SUNWAFA01434D
+   fwsectors: 63
+   fwheads: 16
+
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=100112: Tue Mar  3 16:15:39 2015
+  read : io=1024.0MB, bw=120873KB/s, iops=30218, runt=  8675msec
+  cpu          : usr=3.92%, sys=9.72%, ctx=262150, majf=0, minf=1
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=120873KB/s, minb=120873KB/s, maxb=120873KB/s, mint=8675msec, maxt=8675msec
+Geom name: f0
+Providers:
+1. Name: flash/f0
+   Mediasize: 4000783007744 (3.6T)
+   Sectorsize: 4096
+   Stripesize: 4096
+   Stripeoffset: 0
+   Mode: r0w0e0
+   State: START
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......          23            34          0
+   __RAM: ......                         0          0     0%
+   __CACHE: ....          10            10          0    29%
+   __DATA: .....          13            24          0    70%
+   WRITE: ......           0             0          0
+   __DIRTY: ....                         0          0
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+Consumers:
+1. Name: ada1
+   Mediasize: 256060514304 (238G)
+   Sectorsize: 512
+   Mode: r1w1e1
+   State: START     Role: CACHE    RAM: 4096MB
+2. Name: ada2
+   Mediasize: 4000787030016 (3.6T)
+   Sectorsize: 512
+   Mode: r1w1e1
+   State: START     Role: DATA     Synchronized: 100%
+
+         Type InUse MemUse HighUse Requests  Size(s)
+  gflash_data    72 6492600K       -      104  128,512,2048,4096,8192,16384
+Tue Mar  3 16:15:49 EET 2015
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1        279723.0         7.0    1118599.5         44.5    0       16.8      15.6 
+ada2           115.0         3.0        336.0          1.5    0        0.1       0.1 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100116: Tue Mar  3 16:16:38 2015
+  read : io=8192.0MB, bw=173616KB/s, iops=1356, runt= 48317msec
+  cpu          : usr=0.42%, sys=1.09%, ctx=65541, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=173616KB/s, minb=173616KB/s, maxb=173616KB/s, mint=48317msec, maxt=48317msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......       65605       2097254       8192
+   __RAM: ......                         0          0     0%
+   __CACHE: ....          53            72          0     0%
+   __DATA: .....       65552       2097182       8192    99%
+   WRITE: ......           0             0          0
+   __DIRTY: ....                         0          0
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1        279766.0        10.0    1118847.5         72.5    0       16.8      15.6 
+ada2         65654.0         3.0    8388968.0          1.5    0       46.6      46.6 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100118: Tue Mar  3 16:17:27 2015
+  read : io=8192.0MB, bw=173656KB/s, iops=1356, runt= 48306msec
+  cpu          : usr=0.23%, sys=0.58%, ctx=65541, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=173655KB/s, minb=173655KB/s, maxb=173655KB/s, mint=48306msec, maxt=48306msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......      131187       4194474      16384
+   __RAM: ......                         0          0     0%
+   __CACHE: ....          99           140          0     0%
+   __DATA: .....      131088       4194334      16384    99%
+   WRITE: ......           0             0          0
+   __DIRTY: ....                         0          0
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1        279812.0     81930.0    1119119.5    8454216.5    0       38.9      33.5 
+ada2        131190.0         3.0   16777576.0          1.5    0       89.7      89.7 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100121: Tue Mar  3 16:17:49 2015
+  read : io=8192.0MB, bw=390458KB/s, iops=3050, runt= 21484msec
+  cpu          : usr=0.72%, sys=2.60%, ctx=65539, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=390458KB/s, minb=390458KB/s, maxb=390458KB/s, mint=21484msec, maxt=21484msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......      196769       6291694      24576
+   __RAM: ......                         0          0     0%
+   __CACHE: ....       65681       2097360       8192    33%
+   __DATA: .....      131088       4194334      16384    66%
+   WRITE: ......           0             0          0
+   __DIRTY: ....                         0          0
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1        345394.0     81930.0    9507999.5    8454216.5    0       58.7      53.2 
+ada2        131190.0         3.0   16777576.0          1.5    0       89.7      89.7 
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=100123: Tue Mar  3 16:18:17 2015
+  read : io=1024.0MB, bw=37560KB/s, iops=9390, runt= 27917msec
+  cpu          : usr=2.49%, sys=4.13%, ctx=262158, majf=0, minf=1
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=37560KB/s, minb=37560KB/s, maxb=37560KB/s, mint=27917msec, maxt=27917msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......      458959       6553906      25601
+   __RAM: ......                         0          0     0%
+   __CACHE: ....      327871       2359572       9217    36%
+   __DATA: .....      131088       4194334      16384    63%
+   WRITE: ......           0             0          0
+   __DIRTY: ....                         0          0
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1        607584.0     81930.0   10556847.5    8454216.5    0       83.6      78.2 
+ada2        131190.0         3.0   16777576.0          1.5    0       89.7      89.7 
+32rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+...
+fio-2.1.9
+Starting 32 threads
+
+32rr4k: (groupid=0, jobs=32): err= 0: pid=100125: Tue Mar  3 16:18:28 2015
+  read : io=4096.0MB, bw=398244KB/s, iops=99560, runt= 10532msec
+  cpu          : usr=0.48%, sys=0.95%, ctx=1059585, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=1048576/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=4096.0MB, aggrb=398243KB/s, minb=398243KB/s, maxb=398243KB/s, mint=10532msec, maxt=10532msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508294       7603604      29701
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377206       3409270      13317    44%
+   __DATA: .....      131088       4194334      16384    55%
+   WRITE: ......           0             0          0
+   __DIRTY: ....                         0          0
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1656919.0     81930.0   14755639.5    8454216.5    0      412.6      88.8 
+ada2        131190.0         3.0   16777576.0          1.5    0       89.7      89.7 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100158: Tue Mar  3 16:18:38 2015
+  write: io=4096.0MB, bw=457793KB/s, iops=3576, runt=  9162msec
+  cpu          : usr=1.69%, sys=1.64%, ctx=32769, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=32768/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=4096.0MB, aggrb=457793KB/s, minb=457793KB/s, maxb=457793KB/s, mint=9162msec, maxt=9162msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508340       7603672      29701
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377252       3409338      13317    44%
+   __DATA: .....      131088       4194334      16384    55%
+   WRITE: ......       32768       1048576       4096
+   __DIRTY: ....                   1038336       4056
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1656965.0    122890.0   14755911.5   12681288.5    0      437.3      97.2 
+ada2        131190.0       313.0   16777576.0      39681.5   10       94.8      89.9 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100160: Tue Mar  3 16:25:06 2015
+  write: io=65536MB, bw=172792KB/s, iops=1349, runt=388379msec
+  cpu          : usr=0.62%, sys=0.72%, ctx=524310, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=172792KB/s, minb=172792KB/s, maxb=172792KB/s, mint=388379msec, maxt=388379msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508386       7603740      29702
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377298       3409406      13317    44%
+   __DATA: .....      131088       4194334      16384    55%
+   WRITE: ......      557056      17825792      69632
+   __DIRTY: ....                   1043456       4076
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657011.0    778250.0   14756183.5   80314440.5    0      817.0     230.6 
+ada2        131190.0    524423.0   16777576.0   67125761.5   28    14527.0     478.2 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100163: Tue Mar  3 16:31:38 2015
+  write: io=65536MB, bw=171675KB/s, iops=1341, runt=390906msec
+  cpu          : usr=0.60%, sys=0.75%, ctx=524320, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=171675KB/s, minb=171675KB/s, maxb=171675KB/s, mint=390906msec, maxt=390906msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508432       7603808      29702
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377344       3409474      13318    44%
+   __DATA: .....      131088       4194334      16384    55%
+   WRITE: ......     1081344      34603008     135168
+   __DIRTY: ....                   1041408       4068
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657057.0   1433612.0   14756455.5  147947600.5    0     1197.0     364.1 
+ada2        131190.0   1048798.0   16777576.0  134245761.5   37    29070.6     869.1 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100165: Tue Mar  3 16:38:09 2015
+  write: io=65536MB, bw=171650KB/s, iops=1341, runt=390964msec
+  cpu          : usr=0.58%, sys=0.77%, ctx=524326, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=171649KB/s, minb=171649KB/s, maxb=171649KB/s, mint=390964msec, maxt=390964msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508478       7603876      29702
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377390       3409542      13318    44%
+   __DATA: .....      131088       4194334      16384    55%
+   WRITE: ......     1605632      51380224     200704
+   __DIRTY: ....                   1036288       4048
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657103.0   2088972.0   14756727.5  215580752.5    0     1576.8     497.5 
+ada2        131190.0   1573223.0   16777576.0  201372161.5   28    43641.3    1260.2 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100168: Tue Mar  3 16:44:41 2015
+  write: io=65536MB, bw=171335KB/s, iops=1338, runt=391683msec
+  cpu          : usr=0.59%, sys=0.75%, ctx=524309, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=171334KB/s, minb=171334KB/s, maxb=171334KB/s, mint=391683msec, maxt=391683msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508524       7603944      29702
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377423       3409586      13318    44%
+   __DATA: .....      131101       4194358      16384    55%
+   WRITE: ......     2129920      68157440     266240
+   __DIRTY: ....                   1039360       4060
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657136.0   2744339.0   14756903.5  283213948.5    0     1973.2     634.4 
+ada2        131203.0   2097417.0   16777672.0  268468993.5   26    58190.5    1651.8 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100170: Tue Mar  3 16:51:15 2015
+  write: io=65536MB, bw=170901KB/s, iops=1335, runt=392677msec
+  cpu          : usr=0.58%, sys=0.75%, ctx=524319, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170900KB/s, minb=170900KB/s, maxb=170900KB/s, mint=392677msec, maxt=392677msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508570       7604012      29703
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377466       3409648      13318    44%
+   __DATA: .....      131104       4194364      16384    55%
+   WRITE: ......     2654208      84934656     331776
+   __DIRTY: ....                   1043456       4076
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657179.0   3399704.0   14757151.5  350847136.5    0     2380.3     773.5 
+ada2        131206.0   2621593.0   16777696.0  335563521.5   10    72709.7    2044.3 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100173: Tue Mar  3 16:57:49 2015
+  write: io=65536MB, bw=170242KB/s, iops=1330, runt=394196msec
+  cpu          : usr=0.62%, sys=0.71%, ctx=524321, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170242KB/s, minb=170242KB/s, maxb=170242KB/s, mint=394196msec, maxt=394196msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508616       7604080      29703
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377512       3409716      13319    44%
+   __DATA: .....      131104       4194364      16384    55%
+   WRITE: ......     3178496     101711872     397312
+   __DIRTY: ....                   1041408       4068
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657225.0   4055064.0   14757423.5  418480288.5    0     2787.3     912.8 
+ada2        131206.0   3145941.0   16777696.0  402680065.5   14    87304.5    2438.4 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100175: Tue Mar  3 17:04:24 2015
+  write: io=65536MB, bw=170334KB/s, iops=1330, runt=393985msec
+  cpu          : usr=0.59%, sys=0.75%, ctx=524326, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=170333KB/s, minb=170333KB/s, maxb=170333KB/s, mint=393985msec, maxt=393985msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508662       7604148      29703
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377558       3409784      13319    44%
+   __DATA: .....      131104       4194364      16384    55%
+   WRITE: ......     3702784     118489088     462848
+   __DIRTY: ....                   1043456       4076
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657271.0   4710425.0   14757695.5  486113444.5    0     3194.0    1052.0 
+ada2        131206.0   3670153.0   16777696.0  469779201.5   26   101887.8    2832.2 
+1sw128k: (g=0): rw=write, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sw128k: (groupid=0, jobs=1): err= 0: pid=100177: Tue Mar  3 17:10:59 2015
+  write: io=65536MB, bw=169826KB/s, iops=1326, runt=395163msec
+  cpu          : usr=0.64%, sys=0.68%, ctx=524314, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=524288/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=65536MB, aggrb=169825KB/s, minb=169825KB/s, maxb=169825KB/s, mint=395163msec, maxt=395163msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1508708       7604216      29703
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377591       3409828      13319    44%
+   __DATA: .....      131117       4194388      16384    55%
+   WRITE: ......     4227072     135266304     528384
+   __DIRTY: ....                   1038336       4056
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657304.0   5365791.0   14757871.5  553746640.5    0     3600.3    1191.0 
+ada2        131219.0   4194595.0   16777792.0  536907777.5   32   116529.3    3227.4 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100179: Tue Mar  3 17:11:48 2015
+  read : io=8192.0MB, bw=173566KB/s, iops=1355, runt= 48331msec
+  cpu          : usr=0.33%, sys=1.18%, ctx=65543, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=173565KB/s, minb=173565KB/s, maxb=173565KB/s, mint=48331msec, maxt=48331msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1574290       9701436      37896
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377634       3409890      13319    35%
+   __DATA: .....      196656       6291546      24576    64%
+   WRITE: ......     4227072     135266304     528384
+   __DIRTY: ....                   1016832       3972
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657347.0   5365794.0   14758119.5  553746664.5    0     3600.3    1191.0 
+ada2        196758.0   4195262.0   25166424.0  536993153.5   37   116586.9    3274.4 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100181: Tue Mar  3 17:12:37 2015
+  read : io=8192.0MB, bw=173566KB/s, iops=1355, runt= 48331msec
+  cpu          : usr=0.20%, sys=0.60%, ctx=65542, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=173565KB/s, minb=173565KB/s, maxb=173565KB/s, mint=48331msec, maxt=48331msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1639872      11798656      46088
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1377680       3409958      13320    28%
+   __DATA: .....      262192       8388698      32768    71%
+   WRITE: ......     4227072     135266304     528384
+   __DIRTY: ....                    995328       3888
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1657393.0   5447714.0   14758391.5  562200808.5    0     3624.8    1209.4 
+ada2        262294.0   4195942.0   33555032.0  537080193.5   29   116641.7    3318.0 
+1sr128k: (g=0): rw=read, bs=128K-128K/128K-128K/128K-128K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1sr128k: (groupid=0, jobs=1): err= 0: pid=100183: Tue Mar  3 17:12:59 2015
+  read : io=8192.0MB, bw=380246KB/s, iops=2970, runt= 22061msec
+  cpu          : usr=0.81%, sys=2.44%, ctx=65539, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=65536/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=8192.0MB, aggrb=380246KB/s, minb=380246KB/s, maxb=380246KB/s, mint=22061msec, maxt=22061msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1705454      13895876      54280
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1443262       5507178      21512    39%
+   __DATA: .....      262192       8388698      32768    60%
+   WRITE: ......     4227072     135266304     528384
+   __DIRTY: ....                     44032        172
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1722975.0   5447714.0   23147271.5  562200808.5    0     3644.5    1229.1 
+ada2        262294.0   4225675.0   33555032.0  540886017.5   24   117156.4    3340.5 
+1rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1rr4k: (groupid=0, jobs=1): err= 0: pid=100185: Tue Mar  3 17:13:28 2015
+  read : io=1024.0MB, bw=37532KB/s, iops=9383, runt= 27938msec
+  cpu          : usr=2.51%, sys=4.06%, ctx=262154, majf=0, minf=1
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=262144/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=1024.0MB, aggrb=37532KB/s, minb=37532KB/s, maxb=37532KB/s, mint=27938msec, maxt=27938msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     1967644      14158088      55305
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     1705452       5769390      22536    40%
+   __DATA: .....      262192       8388698      32768    59%
+   WRITE: ......     4227072     135266304     528384
+   __DIRTY: ....                         0          0
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       1985165.0   5447714.0   24196119.5  562200808.5    0     3669.5    1254.1 
+ada2        262294.0   4227075.0   33555032.0  541065217.5    0   117178.7    3341.6 
+32rr4k: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+...
+fio-2.1.9
+Starting 32 threads
+
+32rr4k: (groupid=0, jobs=32): err= 0: pid=100187: Tue Mar  3 17:13:39 2015
+  read : io=4096.0MB, bw=398282KB/s, iops=99570, runt= 10531msec
+  cpu          : usr=0.49%, sys=0.95%, ctx=1058579, majf=0, minf=32
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=1048576/w=0/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=4096.0MB, aggrb=398281KB/s, minb=398281KB/s, maxb=398281KB/s, mint=10531msec, maxt=10531msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     3016979      15207786      59405
+   __RAM: ......                         0          0     0%
+   __CACHE: ....     2754787       6819088      26637    44%
+   __DATA: .....      262192       8388698      32768    55%
+   WRITE: ......     4227072     135266304     528384
+   __DIRTY: ....                         0          0
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       3034500.0   5447714.0   28394911.5  562200808.5    0     3998.4    1264.7 
+ada2        262294.0   4227075.0   33555032.0  541065217.5    0   117178.7    3341.6 
+32rrw8k: (g=0): rw=randrw, bs=8K-8K/8K-8K/8K-8K, ioengine=sync, iodepth=1
+...
+fio-2.1.9
+Starting 32 threads
+
+32rrw8k: (groupid=0, jobs=32): err= 0: pid=100220: Tue Mar  3 17:13:49 2015
+  read : io=2753.0MB, bw=298031KB/s, iops=37253, runt=  9459msec
+  write: io=1343.0MB, bw=145389KB/s, iops=18173, runt=  9459msec
+  cpu          : usr=0.26%, sys=0.55%, ctx=524397, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=352384/w=171904/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: io=2753.0MB, aggrb=298030KB/s, minb=298030KB/s, maxb=298030KB/s, mint=9459msec, maxt=9459msec
+  WRITE: io=1343.0MB, aggrb=145388KB/s, minb=145388KB/s, maxb=145388KB/s, mint=9459msec, maxt=9459msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     3370122      15913676      62162
+   __RAM: ......                     53882        210     0%
+   __CACHE: ....     3080989       7471096      29183    46%
+   __DATA: .....      262192       8388698      32768    52%
+   WRITE: ......     4398976     135610112     529727
+   __DIRTY: ....                    293260       1145
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       3360702.0   5662595.0   31002943.5  563747948.5    0     4315.3    1274.2 
+ada2        262294.0   4238832.0   33555032.0  541169689.5    9   117420.0    3351.1 
+1rw4k: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+fio-2.1.9
+Starting 1 thread
+
+1rw4k: (groupid=0, jobs=1): err= 0: pid=100253: Tue Mar  3 17:13:54 2015
+  write: io=1024.0MB, bw=196916KB/s, iops=49228, runt=  5325msec
+  cpu          : usr=7.04%, sys=14.54%, ctx=262149, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=262144/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=1024.0MB, aggrb=196915KB/s, minb=196915KB/s, maxb=196915KB/s, mint=5325msec, maxt=5325msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     3370168      15913744      62163
+   __RAM: ......                     53882        210     0%
+   __CACHE: ....     3081035       7471164      29184    46%
+   __DATA: .....      262192       8388698      32768    52%
+   WRITE: ......     4661120     135872256     530751
+   __DIRTY: ....                    529854       2069
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       3360748.0   5990275.0   31003215.5  565058668.5    0     4327.3    1278.8 
+ada2        262294.0   4249693.0   33555032.0  541271681.5   29   117643.5    3356.8 
+32rw4k: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=sync, iodepth=1
+...
+fio-2.1.9
+Starting 32 threads
+
+32rw4k: (groupid=0, jobs=32): err= 0: pid=100255: Tue Mar  3 17:15:12 2015
+  write: io=4096.0MB, bw=54292KB/s, iops=13573, runt= 77254msec
+  cpu          : usr=0.07%, sys=0.13%, ctx=1055616, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=1048576/d=0, short=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: io=4096.0MB, aggrb=54292KB/s, minb=54292KB/s, maxb=54292KB/s, mint=77254msec, maxt=77254msec
+   Statistics: .    [Request]       [Block]       [MB]
+   READ: .......     3370927      15914866      62167
+   __RAM: ......                     53882        210     0%
+   __CACHE: ....     3081794       7472286      29188    46%
+   __DATA: .....      262192       8388698      32768    52%
+   WRITE: ......     5709696     136920832     534847
+   __DIRTY: ....                   1047870       4093
+   DELETE: .....           0             0          0
+   FLUSH: ......           0
+                        extended device statistics  
+device           r/i         w/i         kr/i         kw/i qlen   tsvc_t/i      sb/i  
+ada1       3361507.0   7300995.0   31007703.5  570301548.5    0     4715.7    1295.5 
+ada2        262294.0   4430523.0   33555032.0  542519861.5   38   304230.9    3434.5 
+Tue Mar  3 17:15:12 EET 2015
